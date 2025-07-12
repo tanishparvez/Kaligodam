@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Laddu Collection - Kaligodam Heritage Sweets</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#D97706',secondary:'#92400E'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        .heritage-font { font-family: 'Playfair Display', serif; }
+        .body-font { font-family: 'Crimson Text', serif; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .custom-radio { appearance: none; width: 1rem; height: 1rem; border: 2px solid #D97706; border-radius: 50%; position: relative; }
+        .custom-radio:checked { background-color: #D97706; }
+        .custom-radio:checked::after { content: ''; width: 0.5rem; height: 0.5rem; background: white; border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .quantity-btn { width: 2.5rem; height: 2.5rem; border: 1px solid #D97706; background: white; color: #D97706; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; }
+        .quantity-btn:hover { background: #D97706; color: white; }
+        .tab-active { background: #D97706; color: white; }
+        .tab-inactive { background: #F3F4F6; color: #6B7280; }
+        .star-rating { color: #FCD34D; }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-orange-50 to-amber-50 body-font">
+    <header class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <a href="https://readdy.ai/home/102535bb-c09e-4d12-ab0a-72b42df55c82/cf263b6d-f777-4966-82b5-f4ccd6944d33" data-readdy="true" class="text-3xl font-['Pacifico'] text-primary">Kaligodam</a>
+                    <div class="text-sm text-secondary heritage-font">Since 1928</div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="./index.html" data-readdy="true" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Home</a>
+                    <a href="./product.html" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our Product</a>
+                    <a href="#" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our Story</a>
+                    <a href="#" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
+                    <a href="#" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Festivals</a>
+                    <a href="#" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Gifting</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="ri-search-line text-gray-700 hover:text-primary cursor-pointer"></i>
+                    </div>
+                    <div class="w-6 h-6 flex items-center justify-center relative">
+                        <i class="ri-shopping-cart-line text-gray-700 hover:text-primary cursor-pointer"></i>
+                        <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-4">
+                    Our <span class="text-primary">Varieties Product</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From traditional Besan Laddu to premium dry fruit varieties, explore our carefully crafted collection of authentic Indian sweets.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Traditional%20besan%20laddu%20sweets%20golden%20yellow%20color%20made%20from%20gram%20flour%20arranged%20on%20brass%20plate%20garnished%20with%20almonds%20and%20pistachios%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background%20with%20subtle%20motifs&width=300&height=200&seq=besan-laddu&orientation=landscape" 
+                             alt="Besan Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Besan Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Classic gram flour laddu with pure ghee, cardamom, and premium nuts. A timeless favorite.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹450</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Coconut%20laddu%20sweets%20white%20color%20made%20from%20fresh%20coconut%20arranged%20on%20silver%20tray%20garnished%20with%20coconut%20flakes%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background%20with%20subtle%20motifs&width=300&height=200&seq=coconut-laddu&orientation=landscape" 
+                             alt="Coconut Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Coconut Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Fresh coconut blended with condensed milk and cardamom for a tropical delight.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹520</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Rava%20laddu%20sweets%20light%20golden%20color%20made%20from%20semolina%20arranged%20on%20brass%20plate%20garnished%20with%20cashews%20and%20raisins%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background%20with%20subtle%20motifs&width=300&height=200&seq=rava-laddu&orientation=landscape" 
+                             alt="Rava Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Rava Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Roasted semolina laddu with ghee, sugar, and aromatic spices for perfect texture.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹480</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div><div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div><div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in group">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Dry%20fruit%20laddu%20sweets%20rich%20brown%20color%20loaded%20with%20almonds%20cashews%20pistachios%20and%20dates%20arranged%20on%20silver%20tray%20premium%20presentation%20warm%20lighting%20heritage%20style%20food%20photography%20traditional%20Indian%20background&width=300&height=200&seq=dryfruits-laddu&orientation=landscape" 
+                             alt="Dry Fruit Laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Dry Fruit Laddu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
+                            <span class="text-sm text-gray-500">per kg</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-4">
+                    Featured <span class="text-primary">Premium Collection</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover our exclusive premium laddu varieties crafted with the finest ingredients and traditional techniques.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Saffron%20laddu%20sweets%20golden%20orange%20color%20with%20visible%20saffron%20strands%20arranged%20in%20elegant%20gift%20box%20premium%20presentation%20with%20silver%20foil%20decoration%20luxury%20Indian%20sweets%20heritage%20style%20photography&width=600&height=400&seq=saffron-laddu&orientation=landscape" 
+                             alt="Saffron Laddu Premium" class="w-full h-80 object-cover object-top">
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-800 heritage-font">Saffron Royal Laddu</h3>
+                                <span class="bg-primary text-white px-3 py-1 !rounded-button text-sm font-semibold">Premium</span>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Our signature laddu infused with premium Kashmiri saffron, pure ghee, and the finest almonds. Each piece is a royal treat that melts in your mouth, delivering an unforgettable taste experience.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center bg-primary rounded-full">
+                                        <i class="ri-check-line text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">Premium Kashmiri Saffron</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center bg-primary rounded-full">
+                                        <i class="ri-check-line text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">Pure A2 Cow Ghee</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center bg-primary rounded-full">
+                                        <i class="ri-check-line text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">Handpicked California Almonds</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-primary heritage-font">₹1,200</span>
+                                <button class="bg-primary hover:bg-secondary text-white px-6 py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                                    Order Premium
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Rose%20laddu%20sweets%20pink%20color%20with%20rose%20petals%20garnish%20arranged%20in%20elegant%20presentation%20premium%20Indian%20sweets%20with%20floral%20decoration%20heritage%20style%20photography%20romantic%20lighting&width=600&height=400&seq=rose-laddu&orientation=landscape" 
+                             alt="Rose Laddu Special" class="w-full h-80 object-cover object-top">
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-800 heritage-font">Rose Garden Laddu</h3>
+                                <span class="bg-pink-500 text-white px-3 py-1 !rounded-button text-sm font-semibold">Special</span>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                A delicate blend of rose essence and traditional ingredients creates this aromatic laddu. Made with organic rose petals and pure milk solids, it's a floral symphony in every bite.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center bg-pink-500 rounded-full">
+                                        <i class="ri-check-line text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">Organic Rose Petals</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center bg-pink-500 rounded-full">
+                                        <i class="ri-check-line text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">Pure Milk Solids</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center bg-pink-500 rounded-full">
+                                        <i class="ri-check-line text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">Natural Rose Essence</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-pink-600 heritage-font">₹850</span>
+                                <button class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                                    Order Special
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-4">
+                    Bulk Orders & <span class="text-primary">Festival Packages</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Perfect for weddings, festivals, corporate events, and special celebrations. Enjoy special pricing on bulk orders.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-6">
+                            <i class="ri-gift-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-4">Festival Collection</h3>
+                        <p class="text-gray-600 mb-6">Special festival packages with assorted laddu varieties for Diwali, Holi, and other celebrations.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">5 kg Mixed Pack</span>
+                                <span class="font-semibold text-primary">₹2,250</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">10 kg Mixed Pack</span>
+                                <span class="font-semibold text-primary">₹4,200</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">20 kg Mixed Pack</span>
+                                <span class="font-semibold text-primary">₹7,800</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Order Festival Pack
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-6">
+                            <i class="ri-heart-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-4">Wedding Collection</h3>
+                        <p class="text-gray-600 mb-6">Elegant wedding packages with premium laddu varieties in beautiful traditional packaging.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">50 Gift Boxes</span>
+                                <span class="font-semibold text-primary">₹12,500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">100 Gift Boxes</span>
+                                <span class="font-semibold text-primary">₹22,000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">200 Gift Boxes</span>
+                                <span class="font-semibold text-primary">₹40,000</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Order Wedding Pack
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-6">
+                            <i class="ri-building-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-4">Corporate Gifts</h3>
+                        <p class="text-gray-600 mb-6">Professional corporate gift packages with custom branding options for business occasions.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">25 Corporate Boxes</span>
+                                <span class="font-semibold text-primary">₹8,750</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">50 Corporate Boxes</span>
+                                <span class="font-semibold text-primary">₹16,000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">100 Corporate Boxes</span>
+                                <span class="font-semibold text-primary">₹28,000</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                            Order Corporate Pack
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-4">
+                    What Our <span class="text-primary">Customers Say</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Read authentic reviews from our satisfied customers who have experienced the taste of our traditional laddu.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=Indian%20woman%20smiling%20portrait%20traditional%20attire%20warm%20lighting%20professional%20headshot%20happy%20expression%20cultural%20background&width=60&height=60&seq=customer1&orientation=squarish" 
+                                 alt="Customer" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 heritage-font">Priya Sharma</h4>
+                                <div class="flex space-x-1 star-rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            "The besan laddu from Kaligodam takes me back to my childhood. The taste is exactly like my grandmother used to make. Absolutely authentic and delicious!"
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <span>Verified Purchase</span>
+                            <span>2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=Indian%20man%20smiling%20portrait%20business%20attire%20warm%20lighting%20professional%20headshot%20happy%20expression%20modern%20background&width=60&height=60&seq=customer2&orientation=squarish" 
+                                 alt="Customer" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 heritage-font">Rajesh Kumar</h4>
+                                <div class="flex space-x-1 star-rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            "Ordered 10kg mixed laddu for Diwali celebration. The quality was exceptional and everyone loved them. The packaging was also very elegant."
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <span>Verified Purchase</span>
+                            <span>1 week ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=Indian%20elderly%20woman%20smiling%20portrait%20traditional%20saree%20warm%20lighting%20professional%20headshot%20happy%20expression%20cultural%20background&width=60&height=60&seq=customer3&orientation=squarish" 
+                                 alt="Customer" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 heritage-font">Meera Patel</h4>
+                                <div class="flex space-x-1 star-rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            "The saffron laddu is absolutely divine! You can taste the premium quality in every bite. Worth every rupee spent. Highly recommended!"
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <span>Verified Purchase</span>
+                            <span>3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-3xl font-['Pacifico'] text-amber-200 mb-4">Kaligodam</div>
+                    <p class="text-amber-100 mb-6 leading-relaxed">
+                        Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks, 
+                        made with love and tradition.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                            <i class="ri-twitter-line"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                            <i class="ri-youtube-line"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold heritage-font mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Store Locator</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Bulk Orders</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Franchise</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold heritage-font mb-4">Customer Care</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Return Policy</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold heritage-font mb-4">Stay Connected</h3>
+                    <p class="text-amber-100 mb-4">Subscribe to our newsletter for special offers and updates.</p>
+                    <div class="flex space-x-2 mb-4">
+                        <input type="email" placeholder="Your email address" 
+                               class="flex-1 px-3 py-2 bg-amber-800 border border-amber-700 !rounded-button text-white placeholder-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
+                        <button class="bg-primary hover:bg-secondary px-4 py-2 !rounded-button transition-all whitespace-nowrap">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-send-plane-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-phone-line text-amber-300"></i>
+                            </div>
+                            <span class="text-amber-100">+91 98765 43210</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-mail-line text-amber-300"></i>
+                            </div>
+                            <span class="text-amber-100">info@kaligodam.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-12 pt-8 text-center">
+                <p class="text-amber-200">
+                    © 2024 Kaligodam Heritage Sweets. All rights reserved. | Established 1928 | 
+                    <span class="text-amber-300">Crafting Sweet Memories for 96 Years</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script id="scroll-animations">
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <script id="tab-functionality">
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('[data-tab]');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('tab-inactive');
+                    });
+                    
+                    this.classList.remove('tab-inactive');
+                    this.classList.add('tab-active');
+                    
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    document.getElementById(targetTab).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+
+    <script id="quantity-controls">
+        function increaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            const currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+            updateTotalAmount();
+        }
+
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            const currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+                updateTotalAmount();
+            }
+        }
+
+        function updateTotalAmount() {
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const selectedVariety = document.querySelector('input[name="variety"]:checked').value;
+            const selectedPackaging = document.querySelector('input[name="packaging"]:checked').value;
+            
+            const prices = {
+                besan: 450,
+                coconut: 520,
+                rava: 480,
+                dryfruits: 750
+            };
+            
+            let total = prices[selectedVariety] * quantity;
+            if (selectedPackaging === 'premium') {
+                total += 50;
+            }
+            
+            document.getElementById('totalAmount').textContent = '₹' + total;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('quantity').addEventListener('input', updateTotalAmount);
+            document.querySelectorAll('input[name="variety"]').forEach(radio => {
+                radio.addEventListener('change', updateTotalAmount);
+            });
+            document.querySelectorAll('input[name="packaging"]').forEach(radio => {
+                radio.addEventListener('change', updateTotalAmount);
+            });
+        });
+    </script>
+</body>
+</html>
