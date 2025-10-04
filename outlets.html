@@ -1,14 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaligodam - Heritage Sweets & Snacks Since 1925</title>
+    <title>Our Outlets - Kaligodam Heritage Sweets Since 1928</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { primary: '#F4D03F', secondary: '#A8E6CF' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#D97706', secondary: '#92400E' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <style>
@@ -16,507 +18,728 @@
             content: "\f3c2";
         }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        .heritage-font {
             font-family: 'Playfair Display', serif;
         }
 
-        .hero-section {
-            background-image: url('https://readdy.ai/api/search-image?query=Traditional%20Indian%20sweets%20and%20snacks%20arranged%20beautifully%20on%20a%20rustic%20wooden%20table%20with%20golden%20light%20streaming%20in%2C%20showing%20heritage%20Indian%20confectionery%20with%20decorative%20elements%2C%20warm%20lighting%2C%20professional%20food%20photography%20with%20shallow%20depth%20of%20field%2C%20nostalgic%20atmosphere&width=1920&height=1080&seq=hero1&orientation=landscape');
-            background-size: cover;
-            background-position: center;
+        .body-font {
+            font-family: 'Crimson Text', serif;
         }
 
-        .hero-overlay {
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.4) 100%);
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
         }
 
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .timeline-item:nth-child(even) {
-            flex-direction: row-reverse;
+        .outlet-card {
+            transition: all 0.3s ease;
         }
 
-        .timeline-item:nth-child(even) .timeline-content {
-            text-align: right;
+        .outlet-card:hover {
+            transform: translateY(-8px);
         }
-
-        .timeline-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background-color: #F4D03F;
-            top: 50%;
-            bottom: -50%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* Style for active navigation link */
-nav a.active,
-#mobile-menu a.active {
-    color: var(--primary); /* Matches hover:text-primary for consistency */
-    font-weight: bold; /* Optional: makes the active link stand out */
-    border-bottom: 2px solid var(--primary); /* Optional: adds an underline for desktop */
-}
-
-/* Optional: Remove hover effect on active link to avoid redundancy */
-nav a.active:hover,
-#mobile-menu a.active:hover {
-    color: var(--primary); /* Ensures color stays consistent on hover */
-}
     </style>
 </head>
 
+<body class="bg-gradient-to-b from-orange-50 to-amber-50 body-font">
+    <!-- Header -->
+    <header
+        class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <div class="text-3xl font-['Pacifico'] text-primary">Kaligodam</div>
+                    <div class="text-sm text-secondary heritage-font">Since 1928</div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+    <a href="./index.html"
+        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Home</a>
+    <a href="./product.html"
+        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our
+        Product</a>
+    <a href="./our-story.html"
+        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our
+        Story</a>
+    <a href="./outlets.html"
+        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
+    <a href="./contact.html"
+        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Contact</a>
+</nav>
 
-<body class="bg-white">
-    <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="#" class="text-3xl font-['Pacifico'] text-primary">Kaligodam</a>
-
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="./index.html" class="text-gray-800 hover:text-primary font-medium transition-colors">Home</a>
-                <a href="./our-story.html" class="text-gray-800 hover:text-primary font-medium transition-colors">Our
-                    Story</a>
-                <a href="./product.html"
-                    class="text-gray-800 hover:text-primary font-medium transition-colors">Products</a>
-                <a href="./gallery.html"
-                    class="text-gray-800 hover:text-primary font-medium transition-colors">Gallery</a>
-                <a href="./outlets.html"
-                    class="text-gray-800 hover:text-primary font-medium transition-colors">Outlets</a>
-                <a href="./media.html" class="text-gray-800 hover:text-primary font-medium transition-colors">Media &
-                    Awards</a>
-            </nav>
-
-            <div class="flex items-center space-x-4">
-                <button
-                    class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition-colors">
-                    <i class="ri-search-line ri-lg"></i>
-                </button>
-                <a href="./contact.html"
-                    class="hidden md:inline-block bg-primary text-gray-800 px-5 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Get
-                    in Touch</a>
-                <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
-                    id="mobile-menu-button">
-                    <i class="ri-menu-line ri-lg"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white absolute w-full left-0 top-full border-t border-gray-200 shadow-lg"
-            id="mobile-menu">
-            <div class="container mx-auto px-4 py-3">
-                <div class="flex flex-col space-y-3">
-                    <a href="./index.html" class="text-gray-800 hover:text-primary py-2 font-medium">Home</a>
-                    <a href="./our-story.html" class="text-gray-800 hover:text-primary py-2 font-medium">Our Story</a>
-                    <a href="./product.html" class="text-gray-800 hover:text-primary py-2 font-medium">Products</a>
-                    <a href="./gallery.html" class="text-gray-800 hover:text-primary py-2 font-medium">Gallery</a>
-                    <a href="./outlets.html" class="text-gray-800 hover:text-primary py-2 font-medium">Outlets</a>
-                    <a href="./media.html" class="text-gray-800 hover:text-primary py-2 font-medium">Media & Awards</a>
+                <div class="flex items-center space-x-4">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="ri-search-line text-gray-700 hover:text-primary cursor-pointer"></i>
+                    </div>
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="ri-shopping-cart-line text-gray-700 hover:text-primary cursor-pointer"></i>
+                    </div>
+                    <button class="md:hidden">
+                        <i class="ri-menu-line text-gray-700 text-2xl"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="outlets" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Retail Outlets</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Visit one of our stores to experience the authentic taste of Kaligodam and our century-old tradition.</p>
-                </div>
-                
-                <!-- Map -->
-                <div class="rounded overflow-hidden shadow-lg mb-12 h-96 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png')"></div>
-                
-                <!-- Outlets Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Outlet 1 -->
-                    <div class="bg-white rounded shadow-md overflow-hidden p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Jaipur Flagship Store</h3>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <p class="text-gray-600">42 Mirza Ismail Road, Pink City, Jaipur, Rajasthan 302001</p>
-                        </div>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <p class="text-gray-600">+91 141 2374290</p>
-                        </div>
-                        <div class="flex items-start mb-4">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <p class="text-gray-600">9:00 AM - 9:00 PM (All days)</p>
-                        </div>
-                        <a href="#" class="text-primary font-medium flex items-center">
-                            Get Directions
-                            <i class="ri-arrow-right-line ri-sm ml-1"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Outlet 2 -->
-                    <div class="bg-white rounded shadow-md overflow-hidden p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Delhi Connaught Place</h3>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <p class="text-gray-600">Shop 15, Block A, Connaught Place, New Delhi 110001</p>
-                        </div>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <p class="text-gray-600">+91 11 23416789</p>
-                        </div>
-                        <div class="flex items-start mb-4">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <p class="text-gray-600">10:00 AM - 8:00 PM (All days)</p>
-                        </div>
-                        <a href="#" class="text-primary font-medium flex items-center">
-                            Get Directions
-                            <i class="ri-arrow-right-line ri-sm ml-1"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Outlet 3 -->
-                    <div class="bg-white rounded shadow-md overflow-hidden p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Mumbai Juhu</h3>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <p class="text-gray-600">Shop 7, Juhu Tara Road, Near Juhu Beach, Mumbai 400049</p>
-                        </div>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <p class="text-gray-600">+91 22 26123456</p>
-                        </div>
-                        <div class="flex items-start mb-4">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <p class="text-gray-600">9:00 AM - 10:00 PM (All days)</p>
-                        </div>
-                        <a href="#" class="text-primary font-medium flex items-center">
-                            Get Directions
-                            <i class="ri-arrow-right-line ri-sm ml-1"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Outlet 4 -->
-                    <div class="bg-white rounded shadow-md overflow-hidden p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Bangalore Indiranagar</h3>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <p class="text-gray-600">No. 1234, 100 Feet Road, Indiranagar, Bangalore 560038</p>
-                        </div>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <p class="text-gray-600">+91 80 25201234</p>
-                        </div>
-                        <div class="flex items-start mb-4">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <p class="text-gray-600">10:00 AM - 9:00 PM (All days)</p>
-                        </div>
-                        <a href="#" class="text-primary font-medium flex items-center">
-                            Get Directions
-                            <i class="ri-arrow-right-line ri-sm ml-1"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Outlet 5 -->
-                    <div class="bg-white rounded shadow-md overflow-hidden p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Kolkata Park Street</h3>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <p class="text-gray-600">25A Park Street, Kolkata, West Bengal 700016</p>
-                        </div>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <p class="text-gray-600">+91 33 22295678</p>
-                        </div>
-                        <div class="flex items-start mb-4">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <p class="text-gray-600">9:30 AM - 8:30 PM (All days)</p>
-                        </div>
-                        <a href="#" class="text-primary font-medium flex items-center">
-                            Get Directions
-                            <i class="ri-arrow-right-line ri-sm ml-1"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Outlet 6 -->
-                    <div class="bg-white rounded shadow-md overflow-hidden p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Hyderabad Jubilee Hills</h3>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <p class="text-gray-600">Plot No. 789, Road No. 36, Jubilee Hills, Hyderabad 500033</p>
-                        </div>
-                        <div class="flex items-start mb-3">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <p class="text-gray-600">+91 40 23554321</p>
-                        </div>
-                        <div class="flex items-start mb-4">
-                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <p class="text-gray-600">10:00 AM - 9:00 PM (All days)</p>
-                        </div>
-                        <a href="#" class="text-primary font-medium flex items-center">
-                            Get Directions
-                            <i class="ri-arrow-right-line ri-sm ml-1"></i>
-                        </a>
-                    </div>
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden pt-20"
+        style="background-image: url('https://readdy.ai/api/search-image?query=Kolkata%20cityscape%20with%20traditional%20shops%20street%20view%2C%20vibrant%20city%20life%2C%20heritage%20buildings%2C%20bustling%20market%20scene%2C%20warm%20lighting&width=1920&height=1080&seq=kolkata-outlets&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-r from-amber-900/80 via-orange-900/60 to-transparent"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl">
+                <div class="fade-in">
+                    <h1 class="text-5xl md:text-7xl font-bold text-white heritage-font mb-6 leading-tight">
+                        Visit Our <span class="text-amber-200">Heritage Outlets</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-amber-100 mb-8 leading-relaxed">
+                        Experience the warmth of tradition at any of our 6 outlets across Kolkata. Each location brings 
+                        you the same authentic taste that has been cherished since 1928.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer class="bg-gray-900 text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <!-- Company Info -->
-                <div>
-                    <h3 class="text-2xl font-['Pacifico'] text-primary mb-6">Kaligodam</h3>
-                    <p class="text-gray-400 mb-6">Crafting authentic Indian sweets and snacks since 1925. A century of tradition in every bite.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-gray-900 transition-colors">
-                            <i class="ri-facebook-fill"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-gray-900 transition-colors">
-                            <i class="ri-instagram-fill"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-gray-900 transition-colors">
-                            <i class="ri-twitter-x-fill"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-gray-900 transition-colors">
-                            <i class="ri-youtube-fill"></i>
-                        </a>
+    <!-- Quick Stats -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="fade-in text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-3">
+                        <i class="ri-store-2-line text-white text-3xl"></i>
                     </div>
+                    <h3 class="text-3xl font-bold text-primary heritage-font">6</h3>
+                    <p class="text-gray-600">Outlets Across Kolkata</p>
                 </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
-                        <li><a href="#our-story" class="text-gray-400 hover:text-primary transition-colors">Our Story</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-primary transition-colors active">Products</a></li>
-                        <li><a href="#gallery" class="text-gray-400 hover:text-primary transition-colors">Gallery</a></li>
-                        <li><a href="#outlets" class="text-gray-400 hover:text-primary transition-colors">Retail Outlets</a></li>
-                        <li><a href="#media" class="text-gray-400 hover:text-primary transition-colors">Media & Awards</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6">Contact Information</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <span class="text-gray-400">42 Mirza Ismail Road, Pink City, Jaipur, Rajasthan 302001</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <span class="text-gray-400">+91 141 2374290</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-mail-line"></i>
-                            </div>
-                            <span class="text-gray-400">info@kaligodam.com</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <span class="text-gray-400">Mon - Sun: 9:00 AM - 9:00 PM</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Payment Methods -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6">Payment Methods</h4>
-                    <div class="flex flex-wrap gap-3 mb-6">
-                        <div class="w-12 h-8 flex items-center justify-center bg-white rounded">
-                            <i class="ri-visa-fill ri-lg text-blue-700"></i>
-                        </div>
-                        <div class="w-12 h-8 flex items-center justify-center bg-white rounded">
-                            <i class="ri-mastercard-fill ri-lg text-orange-600"></i>
-                        </div>
-                        <div class="w-12 h-8 flex items-center justify-center bg-white rounded">
-                            <i class="ri-paypal-fill ri-lg text-blue-600"></i>
-                        </div>
-                        <div class="w-12 h-8 flex items-center justify-center bg-white rounded">
-                            <i class="ri-amazon-pay-fill ri-lg text-gray-800"></i>
-                        </div>
-                        <div class="w-12 h-8 flex items-center justify-center bg-white rounded">
-                            <i class="ri-google-pay-fill ri-lg text-gray-800"></i>
-                        </div>
+                <div class="fade-in text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-3">
+                        <i class="ri-time-line text-white text-3xl"></i>
                     </div>
-                    
-                    <h4 class="text-lg font-bold mb-4">Download Our App</h4>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="#" class="flex items-center bg-black rounded px-3 py-2">
-                            <i class="ri-apple-fill ri-lg mr-2"></i>
-                            <span class="text-xs">App Store</span>
-                        </a>
-                        <a href="#" class="flex items-center bg-black rounded px-3 py-2">
-                            <i class="ri-google-play-fill ri-lg mr-2"></i>
-                            <span class="text-xs">Google Play</span>
-                        </a>
+                    <h3 class="text-3xl font-bold text-primary heritage-font">7 AM - 10 PM</h3>
+                    <p class="text-gray-600">Daily Service Hours</p>
+                </div>
+                <div class="fade-in text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-3">
+                        <i class="ri-smartphone-line text-white text-3xl"></i>
                     </div>
+                    <h3 class="text-3xl font-bold text-primary heritage-font">Online</h3>
+                    <p class="text-gray-600">Swiggy • Zomato • Amazon</p>
+                </div>
+                <div class="fade-in text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-3">
+                        <i class="ri-car-line text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-primary heritage-font">Easy</h3>
+                    <p class="text-gray-600">Parking & Accessibility</p>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-500 mb-4 md:mb-0">&copy; 2025 Kaligodam. All rights reserved.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-500 hover:text-primary transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-gray-500 hover:text-primary transition-colors">Terms of Service</a>
-                        <a href="#" class="text-gray-500 hover:text-primary transition-colors">Shipping Policy</a>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="py-16 bg-gradient-to-b from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 heritage-font mb-4">
+                    Find Us in <span class="text-primary">Kolkata</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Strategically located across the city for your convenience
+                </p>
+            </div>
+            <div class="fade-in mb-12">
+                <div class="bg-gray-200 rounded-2xl h-96 relative overflow-hidden shadow-xl"
+                    style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    <div class="absolute top-4 left-4 bg-white rounded-xl p-4 shadow-lg">
+                        <p class="text-sm font-semibold text-gray-800 heritage-font mb-2">6 Outlets Across Kolkata</p>
+                        <p class="text-xs text-gray-600">Click on outlet cards below for directions</p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Outlets Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Outlet 1: Burrabazar (Heritage Store) -->
+                <div class="fade-in outlet-card">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg overflow-hidden h-full">
+                        <div class="relative">
+                            <img src="https://readdy.ai/api/search-image?query=Traditional%20Indian%20sweet%20shop%20heritage%20storefront%20Kolkata%20Burrabazar%2C%20vintage%20signboard%2C%20busy%20street%2C%20authentic%20atmosphere&width=400&height=250&seq=burrabazar-store&orientation=landscape"
+                                alt="Burrabazar Heritage Store" class="w-full h-48 object-cover">
+                            <div class="absolute top-3 right-3 bg-primary text-white px-3 py-1 !rounded-button text-sm font-semibold heritage-font">
+                                Original Since 1928
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-1">Burrabazar</h3>
+                                    <p class="text-sm text-primary font-semibold">Heritage Store</p>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+                                    <i class="ri-store-3-line text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">16, Mullick Street, Burrabazar Police Station, Kolkata - 700007</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-time-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">7:00 AM - 10:00 PM</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-phone-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">+91 33 2234 5678</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl p-3 mb-4">
+                                <p class="text-sm text-gray-600"><strong class="text-gray-800">Specialties:</strong> Hot Boondia, Fresh Sweets, Live Counters</p>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all">
+                                Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outlet 2: Lake Market -->
+                <div class="fade-in outlet-card">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg overflow-hidden h-full">
+                        <div class="relative">
+                            <img src="https://readdy.ai/api/search-image?query=Modern%20Indian%20sweet%20shop%20Lake%20Market%20Kolkata%2C%20contemporary%20storefront%2C%20bright%20display%2C%20elegant%20presentation&width=400&height=250&seq=lake-market-store&orientation=landscape"
+                                alt="Lake Market Outlet" class="w-full h-48 object-cover">
+                            <div class="absolute top-3 right-3 bg-green-600 text-white px-3 py-1 !rounded-button text-sm font-semibold">
+                                Popular
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-1">Lake Market</h3>
+                                    <p class="text-sm text-primary font-semibold">Premium Outlet</p>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+                                    <i class="ri-shopping-bag-3-line text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">24B, Lake Market, Kalighat, Near Charuchandra College, Kolkata - 700029</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-time-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">7:00 AM - 10:00 PM</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-phone-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">+91 33 2456 7890</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl p-3 mb-4">
+                                <p class="text-sm text-gray-600"><strong class="text-gray-800">Specialties:</strong> Gift Hampers, Premium Sweets, Bulk Orders</p>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all">
+                                Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outlet 3: Howrah -->
+                <div class="fade-in outlet-card">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg overflow-hidden h-full">
+                        <div class="relative">
+                            <img src="https://readdy.ai/api/search-image?query=Indian%20sweet%20shop%20Howrah%20GT%20Road%2C%20spacious%20interior%2C%20traditional%20sweets%20display%2C%20family%20shopping&width=400&height=250&seq=howrah-store&orientation=landscape"
+                                alt="Howrah Outlet" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-1">Howrah</h3>
+                                    <p class="text-sm text-primary font-semibold">Main Outlet</p>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+                                    <i class="ri-building-line text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">511, South G.T. Road, Sandhya Bazaar, Howrah - 711101</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-time-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">7:00 AM - 10:00 PM</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-phone-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">+91 33 2641 0326</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl p-3 mb-4">
+                                <p class="text-sm text-gray-600"><strong class="text-gray-800">Specialties:</strong> Morning Snacks, Samosas, Jalebis</p>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all">
+                                Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outlet 4: Salt Lake -->
+                <div class="fade-in outlet-card">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg overflow-hidden h-full">
+                        <div class="relative">
+                            <img src="https://readdy.ai/api/search-image?query=Contemporary%20Indian%20sweet%20boutique%20modern%20showroom%2C%20elegant%20interior%20design%2C%20premium%20display%20cases%2C%20bright%20lighting&width=400&height=250&seq=saltlake-store&orientation=landscape"
+                                alt="Salt Lake Showroom" class="w-full h-48 object-cover">
+                            <div class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 !rounded-button text-sm font-semibold">
+                                New Showroom
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-1">Salt Lake</h3>
+                                    <p class="text-sm text-primary font-semibold">Modern Showroom</p>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+                                    <i class="ri-store-line text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">Salt Lake City Centre, Sector V, Kolkata - 700091</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-time-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">8:00 AM - 10:00 PM</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-phone-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">+91 33 4567 8901</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl p-3 mb-4">
+                                <p class="text-sm text-gray-600"><strong class="text-gray-800">Specialties:</strong> Gift Packaging, Corporate Orders, Prasad</p>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all">
+                                Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outlet 5: Gariahat -->
+                <div class="fade-in outlet-card">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg overflow-hidden h-full">
+                        <div class="relative">
+                            <img src="https://readdy.ai/api/search-image?query=Indian%20sweet%20shop%20busy%20market%20area%2C%20traditional%20storefront%2C%20customers%20browsing%2C%20vibrant%20street%20scene&width=400&height=250&seq=gariahat-store&orientation=landscape"
+                                alt="Gariahat Outlet" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-1">Gariahat</h3>
+                                    <p class="text-sm text-primary font-semibold">Express Outlet</p>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+                                    <i class="ri-restaurant-line text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">Gariahat Road, Near Gariahat Market, Dhakuria, Kolkata - 700019</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-time-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">8:00 AM - 9:30 PM</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-phone-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">+91 33 3456 7890</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl p-3 mb-4">
+                                <p class="text-sm text-gray-600"><strong class="text-gray-800">Specialties:</strong> Quick Service, Ready Packs, Snacks</p>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all">
+                                Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outlet 6: New Market -->
+                <div class="fade-in outlet-card">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg overflow-hidden h-full">
+                        <div class="relative">
+                            <img src="https://readdy.ai/api/search-image?query=Heritage%20sweet%20shop%20New%20Market%20Kolkata%2C%20colonial%20architecture%2C%20traditional%20display%2C%20vintage%20charm&width=400&height=250&seq=newmarket-store&orientation=landscape"
+                                alt="New Market Outlet" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-1">New Market</h3>
+                                    <p class="text-sm text-primary font-semibold">Central Outlet</p>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+                                    <i class="ri-shopping-basket-line text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">Lindsay Street, Near New Market, Esplanade, Kolkata - 700087</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-time-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">7:30 AM - 9:30 PM</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-phone-line text-primary"></i>
+                                    </div>
+                                    <p class="text-gray-700">+91 33 2567 8901</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-xl p-3 mb-4">
+                                <p class="text-sm text-gray-600"><strong class="text-gray-800">Specialties:</strong> Tourist Friendly, Gift Boxes, Traditional Sweets</p>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all">
+                                Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Ordering Section -->
+    <section class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 heritage-font mb-4">
+                    Order <span class="text-primary">Online</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Can't visit us? Get Kaligodam delivered to your doorstep
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all">
+                        <div class="w-20 h-20 flex items-center justify-center bg-orange-100 rounded-full mx-auto mb-6">
+                            <i class="ri-restaurant-2-line text-primary text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-3">Swiggy</h3>
+                        <p class="text-gray-600 mb-6">Fast delivery from all our outlets. Fresh sweets delivered hot!</p>
+                        <button
+                            class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 !rounded-button heritage-font font-semibold transition-all">
+                            Order on Swiggy
+                        </button>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all">
+                        <div class="w-20 h-20 flex items-center justify-center bg-red-100 rounded-full mx-auto mb-6">
+                            <i class="ri-e-bike-line text-red-600 text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-3">Zomato</h3>
+                        <p class="text-gray-600 mb-6">Quick delivery with live tracking. Your favorites just a tap away!</p>
+                        <button
+                            class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 !rounded-button heritage-font font-semibold transition-all">
+                            Order on Zomato
+                        </button>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all">
+                        <div class="w-20 h-20 flex items-center justify-center bg-blue-100 rounded-full mx-auto mb-6">
+                            <i class="ri-shopping-cart-2-line text-blue-600 text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-3">Amazon</h3>
+                        <p class="text-gray-600 mb-6">Premium gift hampers and bulk orders. Delivered across India!</p>
+                        <button
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 !rounded-button heritage-font font-semibold transition-all">
+                            Shop on Amazon
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Services -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 heritage-font mb-4">
+                    Special <span class="text-primary">Services</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We go beyond just selling sweets
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 text-center h-full">
+                        <div class="w-14 h-14 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
+                            <i class="ri-gift-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Custom Gift Hampers</h3>
+                        <p class="text-gray-600 text-sm">Personalized gift boxes for all occasions</p>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 text-center h-full">
+                        <div class="w-14 h-14 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
+                            <i class="ri-truck-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Bulk Orders</h3>
+                        <p class="text-gray-600 text-sm">Special pricing for large quantities</p>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 text-center h-full">
+                        <div class="w-14 h-14 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
+                            <i class="ri-briefcase-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Corporate Gifting</h3>
+                        <p class="text-gray-600 text-sm">Professional packaging for businesses</p>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 text-center h-full">
+                        <div class="w-14 h-14 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
+                            <i class="ri-calendar-event-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Event Catering</h3>
+                        <p class="text-gray-600 text-sm">Sweets and snacks for your celebrations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20 bg-gradient-to-r from-amber-900 to-orange-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold heritage-font mb-6">
+                    Visit Us Today
+                </h2>
+                <p class="text-xl text-amber-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Experience the warmth of our heritage stores. Taste the authenticity that has been cherished 
+                    for 97 years. We look forward to serving you!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="tel:+913322345678"
+                        class="bg-white text-primary hover:bg-amber-100 px-8 py-4 !rounded-button heritage-font font-semibold text-lg transition-all transform hover:scale-105 inline-flex items-center justify-center space-x-2">
+                        <i class="ri-phone-line"></i>
+                        <span>Call Us Now</span>
+                    </a>
+                    <a href="./product.html"
+                        class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 !rounded-button heritage-font font-semibold text-lg transition-all inline-flex items-center justify-center space-x-2">
+                        <i class="ri-shopping-bag-line"></i>
+                        <span>Browse Products</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-3xl font-['Pacifico'] text-amber-200 mb-4">Kaligodam</div>
+                    <p class="text-amber-100 mb-6 leading-relaxed">
+                        Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks,
+                        made with love and tradition from Kolkata's heart.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </div>
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </div>
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                            <i class="ri-twitter-line"></i>
+                        </div>
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                            <i class="ri-youtube-line"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold heritage-font mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-amber-100 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="./our-story.html" class="text-amber-100 hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="./product.html" class="text-amber-100 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="./outlets.html" class="text-amber-100 hover:text-white transition-colors">Store Locator</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Bulk Orders</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Franchise</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold heritage-font mb-4">Our Locations</h3>
+                    <ul class="space-y-2 text-amber-100 text-sm">
+                        <li>• Burrabazar (Heritage Store)</li>
+                        <li>• Lake Market</li>
+                        <li>• Howrah</li>
+                        <li>• Salt Lake</li>
+                        <li>• Gariahat</li>
+                        <li>• New Market</li>
+                    </ul>
+                    <h3 class="text-xl font-bold heritage-font mb-4 mt-6">Order Online</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Swiggy</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Zomato</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Amazon</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold heritage-font mb-4">Stay Connected</h3>
+                    <p class="text-amber-100 mb-4">Subscribe to our newsletter for special offers and updates.</p>
+                    <div class="flex space-x-2 mb-4">
+                        <input type="email" placeholder="Your email address"
+                            class="flex-1 px-3 py-2 bg-amber-800 border border-amber-700 !rounded-button text-white placeholder-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
+                        <button
+                            class="bg-primary hover:bg-secondary px-4 py-2 !rounded-button transition-all whitespace-nowrap">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-send-plane-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-phone-line text-amber-300"></i>
+                            </div>
+                            <span class="text-amber-100">+91 33 2234 5678</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 flex items-center justify-center">
+                                <i class="ri-mail-line text-amber-300"></i>
+                            </div>
+                            <span class="text-amber-100">info@kaligodam.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-12 pt-8 text-center">
+                <p class="text-amber-200">
+                    © 2025 Kaligodam Heritage Sweets. All rights reserved. | Established 1928 |
+                    <span class="text-amber-300">Crafting Sweet Memories for 97 Years</span>
+                </p>
+            </div>
+        </div>
     </footer>
 
-    <script id="mobile-menu-script">
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-                
-                // Change icon based on menu state
-                const icon = mobileMenuButton.querySelector('i');
-                if (mobileMenu.classList.contains('hidden')) {
-                    icon.classList.remove('ri-close-line');
-                    icon.classList.add('ri-menu-line');
-                } else {
-                    icon.classList.remove('ri-menu-line');
-                    icon.classList.add('ri-close-line');
-                }
-            });
-            
-            // Close mobile menu when clicking on a link
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    const icon = mobileMenuButton.querySelector('i');
-                    icon.classList.remove('ri-close-line');
-                    icon.classList.add('ri-menu-line');
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
                 });
+            }, observerOptions);
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
             });
-        });
-    </script>
 
-    <script id="category-tabs-script">
-        document.addEventListener('DOMContentLoaded', function() {
-            // Product category tabs
-            const categoryTabs = document.querySelectorAll('.category-tab');
-            const productCards = document.querySelectorAll('.product-card');
-            
-            categoryTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    // Remove active class from all tabs
-                    categoryTabs.forEach(t => {
-                        t.classList.remove('bg-primary', 'text-gray-800');
-                        t.classList.add('text-gray-700');
-                    });
-                    
-                    // Add active class to clicked tab
-                    this.classList.add('bg-primary', 'text-gray-800');
-                    this.classList.remove('text-gray-700');
-                    
-                    const category = this.getAttribute('data-category');
-                    
-                    // Show/hide products based on category
-                    productCards.forEach(card => {
-                        if (category === 'all' || card.getAttribute('data-category') === category) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-            
-            // Gallery filters
-            const galleryFilters = document.querySelectorAll('.gallery-filter');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            
-            galleryFilters.forEach(filter => {
-                filter.addEventListener('click', function() {
-                    // Remove active class from all filters
-                    galleryFilters.forEach(f => {
-                        f.classList.remove('bg-primary', 'text-gray-800');
-                        f.classList.add('text-gray-700');
-                    });
-                    
-                    // Add active class to clicked filter
-                    this.classList.add('bg-primary', 'text-gray-800');
-                    this.classList.remove('text-gray-700');
-                    
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Show/hide gallery items based on filter
-                    galleryItems.forEach(item => {
-                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 });
             });
         });
     </script>
 </body>
+
 </html>
