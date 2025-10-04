@@ -2,539 +2,583 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Kaligodam Heritage Sweets Since 1928</title>
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { primary: '#D97706', secondary: '#92400E' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Kaligodam Heritage Sweets Since 1928</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#D97706", secondary: "#92400E" },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
 
-        .heritage-font {
-            font-family: 'Playfair Display', serif;
-        }
+    .heritage-font {
+      font-family: "Playfair Display", serif;
+    }
 
-        .body-font {
-            font-family: 'Crimson Text', serif;
-        }
+    .body-font {
+      font-family: "Crimson Text", serif;
+    }
 
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease;
-        }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        .contact-card {
-            transition: all 0.3s ease;
-        }
+    .contact-card {
+      transition: all 0.3s ease;
+    }
 
-        .contact-card:hover {
-            transform: translateY(-5px);
-        }
-    </style>
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
 
 <body class="bg-gradient-to-b from-orange-50 to-amber-50 body-font">
-    <!-- Header -->
-    <header
-        class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center space-x-4">
-                    <div class="text-3xl font-['Pacifico'] text-primary">Kaligodam</div>
-                    <div class="text-sm text-secondary heritage-font">Since 1928</div>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="./index.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Home</a>
-                    <a href="./product.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our
-                        Product</a>
-                    <a href="./our-story.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our
-                        Story</a>
-                    <a href="./outlets.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
-                    <a href="./contact.html"
-                        class="text-primary transition-colors heritage-font font-semibold">Contact</a>
-                </nav>
-                <div class="flex items-center space-x-4">
-                    <div class="w-6 h-6 flex items-center justify-center">
-                        <i class="ri-search-line text-gray-700 hover:text-primary cursor-pointer"></i>
-                    </div>
-                    <div class="w-6 h-6 flex items-center justify-center">
-                        <i class="ri-shopping-cart-line text-gray-700 hover:text-primary cursor-pointer"></i>
-                    </div>
-                    <button class="md:hidden">
-                        <i class="ri-menu-line text-gray-700 text-2xl"></i>
-                    </button>
-                </div>
-            </div>
+  <!-- Header -->
+  <header
+    class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center space-x-4">
+          <div class="text-3xl font-['Pacifico'] text-primary">Kaligodam</div>
+          <div class="text-sm text-secondary heritage-font">Since 1928</div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-[60vh] flex items-center overflow-hidden pt-20"
-        style="background-image: url('https://readdy.ai/api/search-image?query=Indian%20customer%20service%20heritage%20business%20warm%20welcome%2C%20traditional%20shop%20interior%2C%20friendly%20staff%2C%20Kolkata%20atmosphere&width=1920&height=1080&seq=contact-hero&orientation=landscape'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-gradient-to-r from-amber-900/85 via-orange-900/70 to-transparent"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="max-w-3xl">
-                <div class="fade-in">
-                    <h1 class="text-5xl md:text-7xl font-bold text-white heritage-font mb-6 leading-tight">
-                        Get In <span class="text-amber-200">Touch</span>
-                    </h1>
-                    <p class="text-xl md:text-2xl text-amber-100 mb-8 leading-relaxed">
-                        We'd love to hear from you! Whether you have questions, feedback, or special requests, 
-                        our team is here to help with the same warmth we've offered since 1928.
-                    </p>
-                </div>
-            </div>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="./index.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Home</a>
+          <a href="./product.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our Product</a>
+          <a href="./our-story.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our Story</a>
+          <a href="./outlets.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
+          <a href="./contact.html" class="text-primary transition-colors heritage-font font-semibold">Contact</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+          <i class="ri-menu-line text-gray-700 text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-amber-100 border-t border-primary shadow-lg">
+      <a href="./index.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Home</a>
+      <a href="./product.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Our Product</a>
+      <a href="./our-story.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Our
+        Story</a>
+      <a href="./outlets.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Outlets</a>
+      <a href="./contact.html"
+        class="block px-6 py-3 text-primary heritage-font font-semibold border-b border-primary">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden pt-20"
+    style="background-image: url('https://readdy.ai/api/search-image?query=Indian%20customer%20service%20heritage%20business%20warm%20welcome%2C%20traditional%20shop%20interior%2C%20friendly%20staff%2C%20Kolkata%20atmosphere&width=1920&height=1080&seq=contact-hero&orientation=landscape'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-gradient-to-r from-amber-900/85 via-orange-900/70 to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-3xl">
+        <div class="fade-in">
+          <h1 class="text-5xl md:text-7xl font-bold text-white heritage-font mb-6 leading-tight">
+            Get In <span class="text-amber-200">Touch</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-amber-100 mb-8 leading-relaxed">
+            We'd love to hear from you! Whether you have questions, feedback, or special requests,
+            our team is here to help with the same warmth we've offered since 1928.
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Methods -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 heritage-font mb-4">
-                    Multiple Ways to <span class="text-primary">Reach Us</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Choose the method that works best for you
-                </p>
+  <!-- Contact Methods -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 heritage-font mb-4">
+          Multiple Ways to <span class="text-primary">Reach Us</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Choose the method that works best for you</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div class="fade-in contact-card">
+          <div
+            class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center h-full">
+            <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
+              <i class="ri-phone-line text-white text-3xl"></i>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                <div class="fade-in contact-card">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center h-full">
-                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
-                            <i class="ri-phone-line text-white text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-3">Call Us</h3>
-                        <p class="text-gray-600 text-sm mb-4">Available 7 AM - 10 PM</p>
-                        <a href="tel:+913322345678" class="text-primary font-semibold hover:text-secondary">+91 33 2234 5678</a>
-                        <br>
-                        <a href="tel:+919876543210" class="text-primary font-semibold hover:text-secondary">+91 98765 43210</a>
-                    </div>
-                </div>
-
-                <div class="fade-in contact-card">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center h-full">
-                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
-                            <i class="ri-mail-line text-white text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-3">Email Us</h3>
-                        <p class="text-gray-600 text-sm mb-4">We'll respond within 24 hours</p>
-                        <a href="mailto:info@kaligodam.com" class="text-primary font-semibold hover:text-secondary break-all">info@kaligodam.com</a>
-                        <br>
-                        <a href="mailto:orders@kaligodam.com" class="text-primary font-semibold hover:text-secondary break-all">orders@kaligodam.com</a>
-                    </div>
-                </div>
-
-                <div class="fade-in contact-card">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center h-full">
-                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
-                            <i class="ri-whatsapp-line text-white text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-3">WhatsApp</h3>
-                        <p class="text-gray-600 text-sm mb-4">Chat with us instantly</p>
-                        <a href="https://wa.me/919876543210" class="text-primary font-semibold hover:text-secondary">+91 98765 43210</a>
-                        <p class="text-xs text-gray-500 mt-2">Click to chat</p>
-                    </div>
-                </div>
-
-                <div class="fade-in contact-card">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center h-full">
-                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
-                            <i class="ri-map-pin-line text-white text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-3">Visit Us</h3>
-                        <p class="text-gray-600 text-sm mb-4">6 outlets across Kolkata</p>
-                        <a href="./outlets.html" class="text-primary font-semibold hover:text-secondary">View All Outlets</a>
-                    </div>
-                </div>
-            </div>
+            <h3 class="text-xl font-bold text-gray-800 heritage-font mb-3">Call Us</h3>
+            <p class="text-gray-600 text-sm mb-4">Available 7 AM - 10 PM</p>
+            <a href="tel:+913322345678" class="text-primary font-semibold hover:text-secondary">+91 33 2234 5678</a>
+            <br />
+            <a href="tel:+919876543210" class="text-primary font-semibold hover:text-secondary">+91 98765 43210</a>
+          </div>
         </div>
-    </section>
 
-    <!-- Contact Form & Info -->
-    <section class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <!-- Contact Form -->
-                <div class="fade-in">
-                    <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 heritage-font mb-6">
-                            Send Us a <span class="text-primary">Message</span>
-                        </h2>
-                        <form class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-gray-700 font-semibold mb-2">First Name *</label>
-                                    <input type="text" required
-                                        class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors"
-                                        placeholder="John">
-                                </div>
-                                <div>
-                                    <label class="block text-gray-700 font-semibold mb-2">Last Name *</label>
-                                    <input type="text" required
-                                        class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors"
-                                        placeholder="Doe">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
-                                <input type="email" required
-                                    class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors"
-                                    placeholder="john.doe@example.com">
-                            </div>
-
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
-                                <input type="tel" required
-                                    class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors"
-                                    placeholder="+91 98765 43210">
-                            </div>
-
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Subject *</label>
-                                <select required
-                                    class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors">
-                                    <option value="">Select a subject</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="bulk">Bulk Order</option>
-                                    <option value="corporate">Corporate Gifting</option>
-                                    <option value="catering">Event Catering</option>
-                                    <option value="franchise">Franchise Opportunity</option>
-                                    <option value="feedback">Feedback</option>
-                                    <option value="complaint">Complaint</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Message *</label>
-                                <textarea required rows="6"
-                                    class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors resize-none"
-                                    placeholder="Tell us how we can help you..."></textarea>
-                            </div>
-
-                            <button type="submit"
-                                class="w-full bg-primary hover:bg-secondary text-white py-4 !rounded-button heritage-font font-semibold text-lg transition-all transform hover:scale-105">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Contact Information -->
-                <div class="fade-in">
-                    <div class="space-y-8">
-                        <div>
-                            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 heritage-font mb-6">
-                                Visit Our <span class="text-primary">Heritage Store</span>
-                            </h2>
-                            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                                Experience the warmth of tradition at our original Burrabazar location where it all began in 1928.
-                            </p>
-                        </div>
-
-                        <!-- Main Location -->
-                        <div class="bg-white rounded-2xl shadow-lg p-8">
-                            <div class="flex items-start space-x-4 mb-6">
-                                <div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full flex-shrink-0">
-                                    <i class="ri-store-3-line text-white text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Burrabazar Heritage Store</h3>
-                                    <p class="text-gray-600">16, Mullick Street, Burrabazar Police Station</p>
-                                    <p class="text-gray-600">Kolkata - 700007, West Bengal</p>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div class="flex items-center space-x-3">
-                                    <i class="ri-time-line text-primary text-xl"></i>
-                                    <span class="text-gray-700"><strong>Hours:</strong> 7:00 AM - 10:00 PM (Daily)</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <i class="ri-phone-line text-primary text-xl"></i>
-                                    <span class="text-gray-700"><strong>Phone:</strong> +91 33 2234 5678</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <i class="ri-mail-line text-primary text-xl"></i>
-                                    <span class="text-gray-700"><strong>Email:</strong> info@kaligodam.com</span>
-                                </div>
-                            </div>
-                            <button
-                                class="w-full mt-6 bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all">
-                                Get Directions
-                            </button>
-                        </div>
-
-                        <!-- Business Inquiries -->
-                        <div class="bg-gradient-to-br from-orange-900 to-amber-900 text-white rounded-2xl shadow-lg p-8">
-                            <h3 class="text-2xl font-bold heritage-font mb-4">Business Inquiries</h3>
-                            <p class="text-amber-100 mb-6 leading-relaxed">
-                                For bulk orders, corporate gifting, event catering, or franchise opportunities, 
-                                reach out to our business team.
-                            </p>
-                            <div class="space-y-3">
-                                <div class="flex items-center space-x-3">
-                                    <i class="ri-phone-line text-amber-300 text-xl"></i>
-                                    <span>+91 98765 00000 (Business)</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <i class="ri-mail-line text-amber-300 text-xl"></i>
-                                    <span>business@kaligodam.com</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Social Media -->
-                        <div class="bg-white rounded-2xl shadow-lg p-8">
-                            <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-4">Follow Us</h3>
-                            <p class="text-gray-600 mb-6">Stay updated with our latest offerings, festivals, and special promotions.</p>
-                            <div class="flex space-x-4">
-                                <a href="#"
-                                    class="w-12 h-12 flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors">
-                                    <i class="ri-facebook-fill text-xl"></i>
-                                </a>
-                                <a href="#"
-                                    class="w-12 h-12 flex items-center justify-center bg-pink-600 hover:bg-pink-700 text-white rounded-full transition-colors">
-                                    <i class="ri-instagram-line text-xl"></i>
-                                </a>
-                                <a href="#"
-                                    class="w-12 h-12 flex items-center justify-center bg-blue-400 hover:bg-blue-500 text-white rounded-full transition-colors">
-                                    <i class="ri-twitter-line text-xl"></i>
-                                </a>
-                                <a href="#"
-                                    class="w-12 h-12 flex items-center justify-center bg-red-600 hover:bg-red-700 text-white rounded-full transition-colors">
-                                    <i class="ri-youtube-line text-xl"></i>
-                                </a>
-                                <a href="#"
-                                    class="w-12 h-12 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white rounded-full transition-colors">
-                                    <i class="ri-whatsapp-line text-xl"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="fade-in contact-card">
+          <div
+            class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center h-full">
+            <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
+              <i class="ri-mail-line text-white text-3xl"></i>
             </div>
+            <h3 class="text-xl font-bold text-gray-800 heritage-font mb-3">Email Us</h3>
+            <p class="text-gray-600 text-sm mb-4">We'll respond within 24 hours</p>
+            <a href="mailto:info@kaligodam.com"
+              class="text-primary font-semibold hover:text-secondary break-all">info@kaligodam.com</a>
+            <br />
+            <a href="mailto:orders@kaligodam.com"
+              class="text-primary font-semibold hover:text-secondary break-all">orders@kaligodam.com</a>
+          </div>
         </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 heritage-font mb-4">
-                    Frequently Asked <span class="text-primary">Questions</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Quick answers to common questions
-                </p>
+        <div class="fade-in contact-card">
+          <div
+            class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center h-full">
+            <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
+              <i class="ri-whatsapp-line text-white text-3xl"></i>
             </div>
-
-            <div class="max-w-4xl mx-auto space-y-4">
-                <div class="fade-in">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
-                        <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">What are your operating hours?</h3>
-                        <p class="text-gray-700">Most of our outlets are open from 7:00 AM to 10:00 PM daily. Specific hours may vary by location.</p>
-                    </div>
-                </div>
-
-                <div class="fade-in">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
-                        <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Do you accept bulk orders?</h3>
-                        <p class="text-gray-700">Yes! We specialize in bulk orders for weddings, corporate events, and festivals. Contact us at least 48 hours in advance for large orders.</p>
-                    </div>
-                </div>
-
-                <div class="fade-in">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
-                        <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Do you offer home delivery?</h3>
-                        <p class="text-gray-700">Yes, we deliver through Swiggy, Zomato, and Amazon. You can also place direct orders by calling our outlets.</p>
-                    </div>
-                </div>
-
-                <div class="fade-in">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
-                        <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Can I customize gift hampers?</h3>
-                        <p class="text-gray-700">Absolutely! We offer personalized gift hampers for all occasions. Contact our team to discuss your requirements.</p>
-                    </div>
-                </div>
-
-                <div class="fade-in">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
-                        <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Are your products preservative-free?</h3>
-                        <p class="text-gray-700">Yes, we use traditional methods and natural ingredients without any artificial preservatives, maintaining the same quality standards since 1928.</p>
-                    </div>
-                </div>
-            </div>
+            <h3 class="text-xl font-bold text-gray-800 heritage-font mb-3">WhatsApp</h3>
+            <p class="text-gray-600 text-sm mb-4">Chat with us instantly</p>
+            <a href="https://wa.me/919876543210" class="text-primary font-semibold hover:text-secondary">+91 98765
+              43210</a>
+            <p class="text-xs text-gray-500 mt-2">Click to chat</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Map Section -->
-    <section class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 heritage-font mb-4">
-                    Find Us on the <span class="text-primary">Map</span>
-                </h2>
-                <p class="text-xl text-gray-600">Burrabazar Heritage Store</p>
+        <div class="fade-in contact-card">
+          <div
+            class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg text-center h-full">
+            <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mx-auto mb-4">
+              <i class="ri-map-pin-line text-white text-3xl"></i>
             </div>
-            <div class="fade-in">
-                <div class="bg-gray-200 rounded-2xl h-96 overflow-hidden shadow-2xl"
-                    style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
-                    <div class="w-full h-full relative">
-                        <div class="absolute top-4 right-4 bg-white rounded-xl p-4 shadow-lg">
-                            <p class="text-sm font-semibold text-gray-800">16, Mullick Street</p>
-                            <p class="text-xs text-gray-600">Burrabazar, Kolkata</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h3 class="text-xl font-bold text-gray-800 heritage-font mb-3">Visit Us</h3>
+            <p class="text-gray-600 text-sm mb-4">6 outlets across Kolkata</p>
+            <a href="./outlets.html" class="text-primary font-semibold hover:text-secondary">View All Outlets</a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <!-- Contact Form & Info -->
+  <section class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Contact Form -->
+        <div class="fade-in">
+          <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 heritage-font mb-6">
+              Send Us a <span class="text-primary">Message</span>
+            </h2>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <div class="text-3xl font-['Pacifico'] text-amber-200 mb-4">Kaligodam</div>
-                    <p class="text-amber-100 mb-6 leading-relaxed">
-                        Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks,
-                        made with love and tradition from Kolkata's heart.
-                    </p>
-                    <div class="flex space-x-4">
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-facebook-fill"></i>
-                        </div>
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-instagram-line"></i>
-                        </div>
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-twitter-line"></i>
-                        </div>
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-youtube-line"></i>
-                        </div>
-                    </div>
+                  <label class="block text-gray-700 font-semibold mb-2">First Name *</label>
+                  <input type="text" required
+                    class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors"
+                    placeholder="John" />
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold heritage-font mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="./index.html" class="text-amber-100 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="./our-story.html" class="text-amber-100 hover:text-white transition-colors">Our Story</a></li>
-                        <li><a href="./product.html" class="text-amber-100 hover:text-white transition-colors">Products</a></li>
-                        <li><a href="./outlets.html" class="text-amber-100 hover:text-white transition-colors">Outlets</a></li>
-                        <li><a href="./contact.html" class="text-amber-100 hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Franchise</a></li>
-                    </ul>
+                  <label class="block text-gray-700 font-semibold mb-2">Last Name *</label>
+                  <input type="text" required
+                    class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors"
+                    placeholder="Doe" />
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold heritage-font mb-4">Our Locations</h3>
-                    <ul class="space-y-2 text-amber-100 text-sm">
-                        <li>• Burrabazar (Heritage Store)</li>
-                        <li>• Lake Market</li>
-                        <li>• Howrah</li>
-                        <li>• Salt Lake</li>
-                        <li>• Gariahat</li>
-                        <li>• New Market</li>
-                    </ul>
-                    <h3 class="text-xl font-bold heritage-font mb-4 mt-6">Order Online</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Swiggy</a></li>
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Zomato</a></li>
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Amazon</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold heritage-font mb-4">Stay Connected</h3>
-                    <p class="text-amber-100 mb-4">Subscribe to our newsletter for special offers and updates.</p>
-                    <div class="flex space-x-2 mb-4">
-                        <input type="email" placeholder="Your email address"
-                            class="flex-1 px-3 py-2 bg-amber-800 border border-amber-700 !rounded-button text-white placeholder-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
-                        <button
-                            class="bg-primary hover:bg-secondary px-4 py-2 !rounded-button transition-all whitespace-nowrap">
-                            <div class="w-4 h-4 flex items-center justify-center">
-                                <i class="ri-send-plane-line"></i>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center space-x-2">
-                            <div class="w-4 h-4 flex items-center justify-center">
-                                <i class="ri-phone-line text-amber-300"></i>
-                            </div>
-                            <span class="text-amber-100">+91 33 2234 5678</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <div class="w-4 h-4 flex items-center justify-center">
-                                <i class="ri-mail-line text-amber-300"></i>
-                            </div>
-                            <span class="text-amber-100">info@kaligodam.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-amber-800 mt-12 pt-8 text-center">
-                <p class="text-amber-200">
-                    © 2025 Kaligodam Heritage Sweets. All rights reserved. | Established 1928 |
-                    <span class="text-amber-300">Crafting Sweet Memories for 97 Years</span>
-                </p>
-            </div>
+              </div>
+
+              <div>
+                <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                <input type="email" required
+                  class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors"
+                  placeholder="john.doe@example.com" />
+              </div>
+
+              <div>
+                <label class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
+                <input type="tel" required
+                  class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors"
+                  placeholder="+91 98765 43210" />
+              </div>
+
+              <div>
+                <label class="block text-gray-700 font-semibold mb-2">Subject *</label>
+                <select required
+                  class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors">
+                  <option value="">Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="bulk">Bulk Order</option>
+                  <option value="corporate">Corporate Gifting</option>
+                  <option value="catering">Event Catering</option>
+                  <option value="franchise">Franchise Opportunity</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="complaint">Complaint</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-gray-700 font-semibold mb-2">Message *</label>
+                <textarea required rows="6"
+                  class="w-full px-4 py-3 border-2 border-gray-200 !rounded-button focus:border-primary focus:outline-none transition-colors resize-none"
+                  placeholder="Tell us how we can help you..."></textarea>
+              </div>
+
+              <button type="submit"
+                class="w-full bg-primary hover:bg-secondary text-white py-4 !rounded-button heritage-font font-semibold text-lg transition-all transform hover:scale-105">
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
+        <!-- Contact Information -->
+        <div class="fade-in">
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-800 heritage-font mb-6">
+                Visit Our <span class="text-primary">Heritage Store</span>
+              </h2>
+              <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                Experience the warmth of tradition at our original Burrabazar location where it all began in 1928.
+              </p>
+            </div>
 
-            // Form submission
-            const form = document.querySelector('form');
-            if (form) {
-                form.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    alert('Thank you for contacting us! We will get back to you within 24 hours.');
-                    form.reset();
-                });
-            }
+            <!-- Main Location -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+              <div class="flex items-start space-x-4 mb-6">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary rounded-full flex-shrink-0">
+                  <i class="ri-store-3-line text-white text-2xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Burrabazar Heritage Store</h3>
+                  <p class="text-gray-600">16, Mullick Street, Burrabazar Police Station</p>
+                  <p class="text-gray-600">Kolkata - 700007, West Bengal</p>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                  <i class="ri-time-line text-primary text-xl"></i>
+                  <span class="text-gray-700"><strong>Hours:</strong> 7:00 AM - 10:00 PM (Daily)</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="ri-phone-line text-primary text-xl"></i>
+                  <span class="text-gray-700"><strong>Phone:</strong> +91 33 2234 5678</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="ri-mail-line text-primary text-xl"></i>
+                  <span class="text-gray-700"><strong>Email:</strong> info@kaligodam.com</span>
+                </div>
+              </div>
+              <button
+                class="w-full mt-6 bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all">
+                Get Directions
+              </button>
+            </div>
+
+            <!-- Business Inquiries -->
+            <div class="bg-gradient-to-br from-orange-900 to-amber-900 text-white rounded-2xl shadow-lg p-8">
+              <h3 class="text-2xl font-bold heritage-font mb-4">Business Inquiries</h3>
+              <p class="text-amber-100 mb-6 leading-relaxed">
+                For bulk orders, corporate gifting, event catering, or franchise opportunities,
+                reach out to our business team.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-center space-x-3">
+                  <i class="ri-phone-line text-amber-300 text-xl"></i>
+                  <span>+91 98765 00000 (Business)</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="ri-mail-line text-amber-300 text-xl"></i>
+                  <span>business@kaligodam.com</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+              <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-4">Follow Us</h3>
+              <p class="text-gray-600 mb-6">Stay updated with our latest offerings, festivals, and special promotions.</p>
+              <div class="flex space-x-4">
+                <a href="#"
+                  class="w-12 h-12 flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors">
+                  <i class="ri-facebook-fill text-xl"></i>
+                </a>
+                <a href="#"
+                  class="w-12 h-12 flex items-center justify-center bg-pink-600 hover:bg-pink-700 text-white rounded-full transition-colors">
+                  <i class="ri-instagram-line text-xl"></i>
+                </a>
+                <a href="#"
+                  class="w-12 h-12 flex items-center justify-center bg-blue-400 hover:bg-blue-500 text-white rounded-full transition-colors">
+                  <i class="ri-twitter-line text-xl"></i>
+                </a>
+                <a href="#"
+                  class="w-12 h-12 flex items-center justify-center bg-red-600 hover:bg-red-700 text-white rounded-full transition-colors">
+                  <i class="ri-youtube-line text-xl"></i>
+                </a>
+                <a href="#"
+                  class="w-12 h-12 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white rounded-full transition-colors">
+                  <i class="ri-whatsapp-line text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 heritage-font mb-4">
+          Frequently Asked <span class="text-primary">Questions</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Quick answers to common questions</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-4">
+        <div class="fade-in">
+          <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
+            <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">What are your operating hours?</h3>
+            <p class="text-gray-700">Most of our outlets are open from 7:00 AM to 10:00 PM daily. Specific hours may vary by
+              location.</p>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
+            <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Do you accept bulk orders?</h3>
+            <p class="text-gray-700">Yes! We specialize in bulk orders for weddings, corporate events, and festivals.
+              Contact us at least 48 hours in advance for large orders.</p>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
+            <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Do you offer home delivery?</h3>
+            <p class="text-gray-700">Yes, we deliver through Swiggy, Zomato, and Amazon. You can also place direct orders by
+              calling our outlets.</p>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
+            <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Can I customize gift hampers?</h3>
+            <p class="text-gray-700">Absolutely! We offer personalized gift hampers for all occasions. Contact our team to
+              discuss your requirements.</p>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
+            <h3 class="text-lg font-bold text-gray-800 heritage-font mb-2">Are your products preservative-free?</h3>
+            <p class="text-gray-700">Yes, we use traditional methods and natural ingredients without any artificial preservatives,
+              maintaining the same quality standards since 1928.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 heritage-font mb-4">
+          Find Us on the <span class="text-primary">Map</span>
+        </h2>
+        <p class="text-xl text-gray-600">Burrabazar Heritage Store</p>
+      </div>
+      <div class="fade-in">
+        <div class="bg-gray-200 rounded-2xl h-96 overflow-hidden shadow-2xl"
+          style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
+          <div class="w-full h-full relative">
+            <div class="absolute top-4 right-4 bg-white rounded-xl p-4 shadow-lg">
+              <p class="text-sm font-semibold text-gray-800">16, Mullick Street</p>
+              <p class="text-xs text-gray-600">Burrabazar, Kolkata</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div class="text-3xl font-['Pacifico'] text-amber-200 mb-4">Kaligodam</div>
+          <p class="text-amber-100 mb-6 leading-relaxed">
+            Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks,
+            made with love and tradition from Kolkata's heart.
+          </p>
+          <div class="flex space-x-4">
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+              <i class="ri-facebook-fill"></i>
+            </div>
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+              <i class="ri-instagram-line"></i>
+            </div>
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+              <i class="ri-twitter-line"></i>
+            </div>
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+              <i class="ri-youtube-line"></i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold heritage-font mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="./index.html" class="text-amber-100 hover:text-white transition-colors">Home</a></li>
+            <li><a href="./our-story.html" class="text-amber-100 hover:text-white transition-colors">Our Story</a></li>
+            <li><a href="./product.html" class="text-amber-100 hover:text-white transition-colors">Products</a></li>
+            <li><a href="./outlets.html" class="text-amber-100 hover:text-white transition-colors">Outlets</a></li>
+            <li><a href="./contact.html" class="text-amber-100 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Franchise</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold heritage-font mb-4">Our Locations</h3>
+          <ul class="space-y-2 text-amber-100 text-sm">
+            <li>• Burrabazar (Heritage Store)</li>
+            <li>• Lake Market</li>
+            <li>• Howrah</li>
+            <li>• Salt Lake</li>
+            <li>• Gariahat</li>
+            <li>• New Market</li>
+          </ul>
+          <h3 class="text-xl font-bold heritage-font mb-4 mt-6">Order Online</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Swiggy</a></li>
+            <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Zomato</a></li>
+            <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Amazon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold heritage-font mb-4">Stay Connected</h3>
+          <p class="text-amber-100 mb-4">Subscribe to our newsletter for special offers and updates.</p>
+          <div class="flex space-x-2 mb-4">
+            <input type="email" placeholder="Your email address"
+              class="flex-1 px-3 py-2 bg-amber-800 border border-amber-700 !rounded-button text-white placeholder-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm" />
+            <button
+              class="bg-primary hover:bg-secondary px-4 py-2 !rounded-button transition-all whitespace-nowrap">
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-send-plane-line"></i>
+              </div>
+            </button>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="flex items-center space-x-2">
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-phone-line text-amber-300"></i>
+              </div>
+              <span class="text-amber-100">+91 33 2234 5678</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-mail-line text-amber-300"></i>
+              </div>
+              <span class="text-amber-100">info@kaligodam.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-amber-800 mt-12 pt-8 text-center">
+        <p class="text-amber-200">
+          © 2025 Kaligodam Heritage Sweets. All rights reserved. | Established 1928 |
+          <span class="text-amber-300">Crafting Sweet Memories for 97 Years</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
         });
-    </script>
+      }, observerOptions);
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Form submission
+      const form = document.querySelector("form");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you for contacting us! We will get back to you within 24 hours.");
+          form.reset();
+        });
+      }
+
+      // Mobile menu toggle
+      const menuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    });
+  </script>
 </body>
 
 </html>

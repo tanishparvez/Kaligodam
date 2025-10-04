@@ -2,305 +2,841 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaligodam - Heritage Sweets Since 1928</title>
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { primary: '#D97706', secondary: '#92400E' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaligodam - Heritage Sweets Since 1928</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#D97706", secondary: "#92400E" },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
 
-        .heritage-font {
-            font-family: 'Playfair Display', serif;
-        }
+    .heritage-font {
+      font-family: "Playfair Display", serif;
+    }
 
-        .body-font {
-            font-family: 'Crimson Text', serif;
-        }
+    .body-font {
+      font-family: "Crimson Text", serif;
+    }
 
-        .parallax {
-            transform: translateY(var(--scroll-y, 0));
-        }
+    .parallax {
+      transform: translateY(var(--scroll-y, 0));
+    }
 
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease;
-        }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Mobile Menu Styles */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-    </style>
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
 <body class="bg-gradient-to-b from-orange-50 to-amber-50 body-font">
-    <!-- Header -->
-    <header
-        class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
+  <!-- Header -->
+  <header
+    class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center space-x-4">
+          <div class="text-3xl font-['Pacifico'] text-primary">Kaligodam</div>
+          <div class="text-sm text-secondary heritage-font">Since 1928</div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="./index.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Home</a>
+          <a href="./product.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our Product</a>
+          <a href="./our-story.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our Story</a>
+          <a href="./outlets.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
+          <a href="./contact.html" class="text-primary transition-colors heritage-font font-semibold">Contact</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+          <i class="ri-menu-line text-gray-700 text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-amber-100 border-t border-primary shadow-lg">
+      <a href="./index.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Home</a>
+      <a href="./product.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Our Product</a>
+      <a href="./our-story.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Our Story</a>
+      <a href="./outlets.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Outlets</a>
+      <a href="./contact.html"
+        class="block px-6 py-3 text-primary heritage-font font-semibold border-b border-primary">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center overflow-hidden"
+    style="background-image: url('https://readdy.ai/api/search-image?query=Traditional%20Indian%20sweets%20and%20snacks%20arranged%20beautifully%20on%20vintage%20brass%20plates%20with%20warm%20golden%20lighting%2C%20saffron%20and%20maroon%20colors%2C%20heritage%20style%20photography%2C%20traditional%20Indian%20motifs%20in%20background%2C%20warm%20ambient%20lighting%20creating%20nostalgic%20atmosphere%2C%20high%20quality%20food%20photography&width=1920&height=1080&seq=hero1&orientation=landscape'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-gradient-to-r from-amber-900/70 via-orange-900/50 to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-2xl">
+        <div class="fade-in">
+          <h1 class="text-6xl font-bold text-white heritage-font mb-6 leading-tight">
+            Crafting Sweet<br />
+            <span class="text-amber-200">Memories</span><br />
+            Since 1928
+          </h1>
+          <p class="text-xl text-amber-100 mb-8 leading-relaxed">
+            For nearly a century, Kaligodam has been the trusted name in authentic Indian sweets and snacks.
+            Our heritage recipes, passed down through generations, continue to bring joy to families across India.
+          </p>
+          <div class="flex space-x-4">
+            <a href="./our-story.html"
+              class="bg-primary hover:bg-secondary text-white px-8 py-4 !rounded-button heritage-font font-semibold text-lg transition-all transform hover:scale-105 whitespace-nowrap">Explore
+              Our Story</a>
+            <a href="./product.html"
+              class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 !rounded-button heritage-font font-semibold text-lg transition-all whitespace-nowrap">Explore
+              Our Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section id="story" class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center space-x-4">
-                    <div class="text-3xl font-['Pacifico'] text-primary">Kaligodam</div>
-                    <div class="text-sm text-secondary heritage-font hidden sm:block">Since 1928</div>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="./index.html"
-                        class="text-primary transition-colors heritage-font font-semibold">Home</a>
-                    <a href="./product.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our
-                        Product</a>
-                    <a href="./our-story.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our
-                        Story</a>
-                    <a href="./outlets.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
-                    <a href="./contact.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Contact</a>
-                </nav>
-                <div class="flex items-center space-x-4">
-                    <div class="w-6 h-6 flex items-center justify-center hidden sm:flex">
-                        <i class="ri-search-line text-gray-700 hover:text-primary cursor-pointer"></i>
-                    </div>
-                    <div class="w-6 h-6 flex items-center justify-center hidden sm:flex">
-                        <i class="ri-shopping-cart-line text-gray-700 hover:text-primary cursor-pointer"></i>
-                    </div>
-                    <button id="mobile-menu-button" class="md:hidden">
-                        <i class="ri-menu-line text-gray-700 text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-2xl md:hidden z-50">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-8">
-                    <div class="text-2xl font-['Pacifico'] text-primary">Menu</div>
-                    <button id="mobile-menu-close">
-                        <i class="ri-close-line text-gray-700 text-2xl"></i>
-                    </button>
-                </div>
-                <nav class="space-y-4">
-                    <a href="./index.html"
-                        class="block text-primary heritage-font font-semibold text-lg py-2 border-b border-gray-200">Home</a>
-                    <a href="./product.html"
-                        class="block text-gray-800 hover:text-primary heritage-font font-semibold text-lg py-2 border-b border-gray-200">Our
-                        Product</a>
-                    <a href="./our-story.html"
-                        class="block text-gray-800 hover:text-primary heritage-font font-semibold text-lg py-2 border-b border-gray-200">Our
-                        Story</a>
-                    <a href="./outlets.html"
-                        class="block text-gray-800 hover:text-primary heritage-font font-semibold text-lg py-2 border-b border-gray-200">Outlets</a>
-                    <a href="./contact.html"
-                        class="block text-gray-800 hover:text-primary heritage-font font-semibold text-lg py-2 border-b border-gray-200">Contact</a>
-                </nav>
-                <div class="mt-8 space-y-4">
-                    <button class="w-full flex items-center space-x-3 text-gray-700 py-2">
-                        <i class="ri-search-line text-xl"></i>
-                        <span>Search</span>
-                    </button>
-                    <button class="w-full flex items-center space-x-3 text-gray-700 py-2">
-                        <i class="ri-shopping-cart-line text-xl"></i>
-                        <span>Cart</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
-
-    <!-- Rest of your index.html content remains the same -->
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center overflow-hidden pt-20"
-        style="background-image: url('https://readdy.ai/api/search-image?query=Traditional%20Indian%20heritage%20sweet%20shop%20vibrant%20display%20golden%20sweets%20warm%20lighting%20authentic%20atmosphere&width=1920&height=1080&seq=hero1&orientation=landscape'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-gradient-to-r from-amber-900/80 via-orange-900/60 to-transparent"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="max-w-3xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="fade-in">
-                    <h1 class="text-5xl md:text-7xl font-bold text-white heritage-font mb-6 leading-tight">
-                        Taste the <span class="text-amber-200">Legacy</span> Since 1928
-                    </h1>
-                    <p class="text-xl md:text-2xl text-amber-100 mb-8 leading-relaxed">
-                        Authentic Indian sweets handcrafted with love, tradition, and the finest ingredients. 
-                        Four generations of sweetness delivered to your doorstep.
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://readdy.ai/api/search-image?query=Elderly%20Indian%20sweet%20maker%20crafting%20traditional%20sweets%20in%20heritage%20kitchen%20with%20copper%20utensils%2C%20warm%20lighting%2C%20traditional%20Indian%20clothing%2C%20focused%20craftsmanship%2C%20vintage%20sepia%20tones%2C%20authentic%20heritage%20atmosphere%2C%20detailed%20hands%20working%20with%20ingredients&width=600&height=400&seq=story1&orientation=landscape"
+                            alt="Heritage Craftsmanship" class="w-full h-96 object-cover object-top">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <p class="text-sm font-semibold">Master Craftsman at Work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-6">
+                        A Century of <span class="text-primary">Sweet Traditions</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Founded in 1928 by Pandit Kali Gopal Das, Kaligodam began as a small sweet shop with a simple
+                        mission:
+                        to create the finest traditional Indian sweets using authentic recipes and the purest
+                        ingredients.
                     </p>
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="./product.html"
-                            class="bg-primary hover:bg-secondary text-white px-8 py-4 !rounded-button heritage-font font-semibold text-lg transition-all transform hover:scale-105 text-center">
-                            Explore Our Sweets
-                        </a>
-                        <a href="./outlets.html"
-                            class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 !rounded-button heritage-font font-semibold text-lg transition-all text-center">
-                            Find a Store
-                        </a>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        Today, four generations later, we continue to honor our founder's vision. Every sweet, every
+                        snack,
+                        every delicacy is crafted with the same love, care, and attention to detail that has made
+                        Kaligodam
+                        a household name for nearly 100 years.
+                    </p>
+                    <a href="./our-story.html"><button
+                        class="bg-primary hover:bg-secondary text-white px-8 py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                        Our Story
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-4">
+                    Our <span class="text-primary">Heritage Collection</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover our carefully curated selection of traditional sweets and savory snacks,
+                    each crafted using time-honored recipes and the finest ingredients.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="fade-in group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Traditional%20Indian%20laddu%20sweets%20arranged%20on%20vintage%20brass%20plate%2C%20golden%20yellow%20color%2C%20garnished%20with%20nuts%2C%20warm%20lighting%2C%20heritage%20style%20food%20photography%2C%20traditional%20Indian%20background%20with%20subtle%20motifs&width=300&height=200&seq=laddu1&orientation=landscape"
+                            alt="Laddu Collection" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Premium Laddu</h3>
+                        <p class="text-gray-600 mb-4">Handcrafted spheres of sweetness made with pure ghee, premium
+                            nuts, and aromatic spices.</p>
+                        <button
+                            class="text-primary hover:text-secondary font-semibold heritage-font whitespace-nowrap">Explore
+                            Collection →</button>
+                    </div>
+                </div>
+                <div class="fade-in group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Traditional%20Indian%20peda%20sweets%20in%20various%20flavors%20arranged%20elegantly%20on%20silver%20tray%2C%20creamy%20white%20and%20light%20brown%20colors%2C%20garnished%20with%20pistachios%2C%20heritage%20style%20presentation%2C%20warm%20golden%20lighting&width=300&height=200&seq=peda1&orientation=landscape"
+                            alt="Peda Collection" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Authentic Peda</h3>
+                        <p class="text-gray-600 mb-4">Rich, creamy delights made from pure milk and traditional
+                            flavoring, a royal treat.</p>
+                        <button
+                            class="text-primary hover:text-secondary font-semibold heritage-font whitespace-nowrap">Explore
+                            Collection →</button>
+                    </div>
+                </div>
+                <div class="fade-in group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Traditional%20Indian%20namkeen%20and%20bhujia%20snacks%20in%20decorative%20bowls%2C%20golden%20crispy%20texture%2C%20mixed%20varieties%2C%20heritage%20style%20food%20photography%2C%20warm%20lighting%2C%20traditional%20Indian%20serving%20presentation&width=300&height=200&seq=namkeen1&orientation=landscape"
+                            alt="Namkeen Collection" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Crispy Namkeen</h3>
+                        <p class="text-gray-600 mb-4">Savory snacks with perfect spice blends, ideal for every occasion
+                            and celebration.</p>
+                        <button
+                            class="text-primary hover:text-secondary font-semibold heritage-font whitespace-nowrap">Explore
+                            Collection →</button>
+                    </div>
+                </div>
+                <div class="fade-in group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="https://readdy.ai/api/search-image?query=Premium%20badam%20and%20kaju%20sweets%20with%20almonds%20and%20cashews%2C%20silver%20foil%20decoration%2C%20arranged%20on%20traditional%20Indian%20brass%20plate%2C%20rich%20golden%20colors%2C%20heritage%20luxury%20presentation%2C%20warm%20ambient%20lighting&width=300&height=200&seq=nuts1&orientation=landscape"
+                            alt="Premium Nuts Collection" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Badam & Kaju</h3>
+                        <p class="text-gray-600 mb-4">Premium sweets enriched with the finest almonds and cashews for
+                            luxury taste.</p>
+                        <button
+                            class="text-primary hover:text-secondary font-semibold heritage-font whitespace-nowrap">Explore
+                            Collection →</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-16">
+    <section class="py-20 bg-gradient-to-r from-amber-100 to-orange-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <div class="text-3xl font-['Pacifico'] text-amber-200 mb-4">Kaligodam</div>
-                    <p class="text-amber-100 mb-6 leading-relaxed">
-                        Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks,
-                        made with love and tradition.
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-6">
+                        Special <span class="text-primary">Sawa Mani</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        A sacred tradition of offering the first earnings to the divine. Our special Sawa Mani
+                        collection
+                        includes blessed sweets prepared with utmost devotion and purity, perfect for religious
+                        ceremonies
+                        and auspicious occasions.
                     </p>
-                    <div class="flex space-x-4">
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-facebook-fill"></i>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full">
+                                <i class="ri-check-line text-white text-sm"></i>
+                            </div>
+                            <span class="text-gray-700">Prepared with sacred rituals and prayers</span>
                         </div>
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-instagram-line"></i>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full">
+                                <i class="ri-check-line text-white text-sm"></i>
+                            </div>
+                            <span class="text-gray-700">Made with pure, premium ingredients</span>
                         </div>
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-twitter-line"></i>
-                        </div>
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-youtube-line"></i>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full">
+                                <i class="ri-check-line text-white text-sm"></i>
+                            </div>
+                            <span class="text-gray-700">Custom packaging for religious occasions</span>
                         </div>
                     </div>
+                    <button
+                        class="bg-primary hover:bg-secondary text-white px-8 py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                        Order Sawa Mani
+                    </button>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold heritage-font mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="./index.html" class="text-amber-100 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="./our-story.html" class="text-amber-100 hover:text-white transition-colors">Our Story</a></li>
-                        <li><a href="./product.html" class="text-amber-100 hover:text-white transition-colors">Products</a></li>
-                        <li><a href="./outlets.html" class="text-amber-100 hover:text-white transition-colors">Outlets</a></li>
-                        <li><a href="./contact.html" class="text-amber-100 hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Franchise</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold heritage-font mb-4">Our Locations</h3>
-                    <ul class="space-y-2 text-amber-100">
-                        <li>Burrabazar, Kolkata</li>
-                        <li>Lake Market, Kolkata</li>
-                        <li>Howrah</li>
-                        <li>Salt Lake, Kolkata</li>
-                    </ul>
-                    <h3 class="text-xl font-bold heritage-font mb-4 mt-6">Order Online</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Swiggy</a></li>
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Zomato</a></li>
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Amazon</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold heritage-font mb-4">Stay Connected</h3>
-                    <p class="text-amber-100 mb-4">Subscribe to our newsletter for special offers and updates.</p>
-                    <div class="flex space-x-2 mb-4">
-                        <input type="email" placeholder="Your email address"
-                            class="flex-1 px-3 py-2 bg-amber-800 border border-amber-700 !rounded-button text-white placeholder-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
-                        <button
-                            class="bg-primary hover:bg-secondary px-4 py-2 !rounded-button transition-all whitespace-nowrap">
-                            <div class="w-4 h-4 flex items-center justify-center">
-                                <i class="ri-send-plane-line"></i>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center space-x-2">
-                            <div class="w-4 h-4 flex items-center justify-center">
-                                <i class="ri-phone-line text-amber-300"></i>
-                            </div>
-                            <span class="text-amber-100">+91 98765 43210</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <div class="w-4 h-4 flex items-center justify-center">
-                                <i class="ri-mail-line text-amber-300"></i>
-                            </div>
-                            <span class="text-amber-100">info@kaligodam.com</span>
-                        </div>
+                <div class="fade-in">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://readdy.ai/api/search-image?query=Sacred%20Indian%20sweets%20arranged%20for%20religious%20ceremony%2C%20traditional%20brass%20plates%20and%20diyas%2C%20temple%20setting%20with%20flowers%20and%20incense%2C%20golden%20warm%20lighting%2C%20spiritual%20atmosphere%2C%20traditional%20Indian%20religious%20offerings%20presentation&width=600&height=400&seq=sawa1&orientation=landscape"
+                            alt="Sawa Mani Special" class="w-full h-96 object-cover object-top">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                 </div>
-            </div>
-            <div class="border-t border-amber-800 mt-12 pt-8 text-center">
-                <p class="text-amber-200">
-                    © 2025 Kaligodam Heritage Sweets. All rights reserved. | Established 1928 |
-                    <span class="text-amber-300">Crafting Sweet Memories for 97 Years</span>
-                </p>
             </div>
         </div>
-    </footer>
+    </section>
+    <section id="outlets" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-4">
+                    Visit Our <span class="text-primary">Heritage Outlets</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Experience the warmth of our traditional stores where every sweet tells a story of our rich
+                    heritage.
+                </p>
+            </div>
+            <div class="mb-12">
+                <div class="bg-gray-200 rounded-2xl h-96 relative overflow-hidden"
+                    style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="absolute top-4 left-4 bg-white rounded-lg p-3 shadow-lg">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-map-pin-line text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg">
+                        <img src="https://readdy.ai/api/search-image?query=Traditional%20Indian%20sweet%20shop%20interior%20with%20vintage%20display%20cases%2C%20warm%20wooden%20furniture%2C%20brass%20decorations%2C%20heritage%20style%20lighting%2C%20customers%20browsing%20sweets%2C%20authentic%20traditional%20atmosphere&width=400&height=250&seq=store1&orientation=landscape"
+                            alt="Main Store" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Heritage Main Store</h3>
+                        <p class="text-gray-600 mb-3">123 Gandhi Road, Central Market, New Delhi - 110001</p>
+                        <div class="space-y-2 text-sm text-gray-600 mb-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 flex items-center justify-center">
+                                    <i class="ri-time-line"></i>
+                                </div>
+                                <span>Mon-Sun: 8:00 AM - 10:00 PM</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 flex items-center justify-center">
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                                <span>+91 98765 43210</span>
+                            </div>
+                        </div>
+                        <button
+                            class="text-primary hover:text-secondary font-semibold heritage-font whitespace-nowrap">Get
+                            Directions →</button>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg">
+                        <img src="https://readdy.ai/api/search-image?query=Modern%20Indian%20sweet%20shop%20with%20traditional%20elements%2C%20live%20counter%20preparation%2C%20chefs%20making%20sweets%2C%20contemporary%20design%20with%20heritage%20touches%2C%20bright%20lighting%2C%20customers%20watching%20sweet%20making%20process&width=400&height=250&seq=store2&orientation=landscape"
+                            alt="Live Counter Store" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Live Counter Outlet</h3>
+                        <p class="text-gray-600 mb-3">456 Mall Road, Shopping Complex, Mumbai - 400001</p>
+                        <div class="space-y-2 text-sm text-gray-600 mb-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 flex items-center justify-center">
+                                    <i class="ri-time-line"></i>
+                                </div>
+                                <span>Mon-Sun: 9:00 AM - 11:00 PM</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 flex items-center justify-center">
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                                <span>+91 98765 43211</span>
+                            </div>
+                        </div>
+                        <button
+                            class="text-primary hover:text-secondary font-semibold heritage-font whitespace-nowrap">Get
+                            Directions →</button>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg">
+                        <img src="https://readdy.ai/api/search-image?query=Premium%20Indian%20sweet%20boutique%20with%20elegant%20display%2C%20gift%20packaging%20section%2C%20luxury%20interior%20design%2C%20traditional%20meets%20modern%20aesthetic%2C%20well-lit%20showcases%2C%20premium%20sweets%20presentation&width=400&height=250&seq=store3&orientation=landscape"
+                            alt="Premium Boutique" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Premium Boutique</h3>
+                        <p class="text-gray-600 mb-3">789 Park Street, Elite Plaza, Kolkata - 700001</p>
+                        <div class="space-y-2 text-sm text-gray-600 mb-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 flex items-center justify-center">
+                                    <i class="ri-time-line"></i>
+                                </div>
+                                <span>Mon-Sun: 10:00 AM - 9:00 PM</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 flex items-center justify-center">
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                                <span>+91 98765 43212</span>
+                            </div>
+                        </div>
+                        <button
+                            class="text-primary hover:text-secondary font-semibold heritage-font whitespace-nowrap">Get
+                            Directions →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="festivals" class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-4">
+                    Celebrating <span class="text-primary">Festivals</span> with Kaligodam
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    For generations, Kaligodam has been part of India's most cherished festival celebrations,
+                    bringing families together with our traditional sweets and snacks.
+                </p>
+            </div>
+            <div class="overflow-x-auto pb-4">
+                <div class="flex space-x-8 min-w-max">
+                    <div class="fade-in flex-shrink-0 w-80">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Diwali%20celebration%20with%20traditional%20Indian%20sweets%2C%20diyas%20and%20rangoli%2C%20warm%20golden%20lighting%2C%20festive%20atmosphere%2C%20families%20sharing%20sweets%2C%20traditional%20decorations%2C%20heritage%20style%20photography&width=320&height=200&seq=diwali1&orientation=landscape"
+                                alt="Diwali Celebration" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Diwali - Festival of
+                                    Lights</h3>
+                                <p class="text-gray-600 mb-4">Illuminate your celebrations with our special Diwali
+                                    collection featuring traditional sweets and gift hampers.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-primary font-semibold heritage-font">Special Offers
+                                        Available</span>
+                                    <div class="w-6 h-6 flex items-center justify-center">
+                                        <i class="ri-arrow-right-line text-primary"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in flex-shrink-0 w-80">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Holi%20festival%20celebration%20with%20colorful%20gulal%20and%20traditional%20sweets%2C%20vibrant%20colors%2C%20festive%20joy%2C%20families%20celebrating%2C%20traditional%20Indian%20festival%20atmosphere%2C%20heritage%20photography%20style&width=320&height=200&seq=holi1&orientation=landscape"
+                                alt="Holi Celebration" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Holi - Festival of Colors
+                                </h3>
+                                <p class="text-gray-600 mb-4">Add sweetness to your colorful celebrations with our Holi
+                                    special sweets and savory treats.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-primary font-semibold heritage-font">Limited Edition</span>
+                                    <div class="w-6 h-6 flex items-center justify-center">
+                                        <i class="ri-arrow-right-line text-primary"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in flex-shrink-0 w-80">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Raksha%20Bandhan%20celebration%20with%20traditional%20sweets%20and%20rakhi%2C%20brother%20sister%20bonding%2C%20festive%20decorations%2C%20traditional%20Indian%20family%20celebration%2C%20warm%20lighting%2C%20heritage%20style%20photography&width=320&height=200&seq=rakhi1&orientation=landscape"
+                                alt="Raksha Bandhan" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Raksha Bandhan</h3>
+                                <p class="text-gray-600 mb-4">Strengthen the bond of love with our special Rakhi
+                                    collection and traditional sweet boxes.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-primary font-semibold heritage-font">Gift Combos</span>
+                                    <div class="w-6 h-6 flex items-center justify-center">
+                                        <i class="ri-arrow-right-line text-primary"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in flex-shrink-0 w-80">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Karva%20Chauth%20celebration%20with%20traditional%20sweets%20and%20decorative%20thali%2C%20Indian%20women%20in%20traditional%20attire%2C%20festive%20preparations%2C%20warm%20golden%20lighting%2C%20heritage%20celebration%20photography&width=320&height=200&seq=karva1&orientation=landscape"
+                                alt="Karva Chauth" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Karva Chauth</h3>
+                                <p class="text-gray-600 mb-4">Make your fast-breaking moment special with our curated
+                                    selection of premium sweets.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-primary font-semibold heritage-font">Premium Selection</span>
+                                    <div class="w-6 h-6 flex items-center justify-center">
+                                        <i class="ri-arrow-right-line text-primary"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=Vintage%20style%20cookbook%20cover%20with%20traditional%20Indian%20sweets%20recipes%2C%20heritage%20design%20elements%2C%20golden%20and%20maroon%20colors%2C%20elegant%20typography%2C%20traditional%20Indian%20motifs%2C%20premium%20book%20presentation&width=400&height=500&seq=ebook1&orientation=portrait"
+                            alt="Free Recipe E-Book" class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
+                        <div
+                            class="absolute -top-4 -right-4 bg-primary text-white px-4 py-2 !rounded-button heritage-font font-semibold">
+                            FREE
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-6">
+                        Download Our <span class="text-primary">Heritage Recipe Book</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Discover the secrets behind our century-old recipes! Our exclusive e-book contains traditional
+                        recipes passed down through generations, complete with step-by-step instructions and expert
+                        tips.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full">
+                                <i class="ri-check-line text-white text-sm"></i>
+                            </div>
+                            <span class="text-gray-700">50+ Traditional Sweet Recipes</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full">
+                                <i class="ri-check-line text-white text-sm"></i>
+                            </div>
+                            <span class="text-gray-700">Expert Tips & Techniques</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full">
+                                <i class="ri-check-line text-white text-sm"></i>
+                            </div>
+                            <span class="text-gray-700">Beautiful Photography</span>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-2xl">
+                        <h3 class="text-lg font-semibold text-gray-800 heritage-font mb-4">Get Your Free Copy</h3>
+                        <div class="flex space-x-4">
+                            <input type="email" placeholder="Enter your email address"
+                                class="flex-1 px-4 py-3 border border-gray-300 !rounded-button focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+                            <button
+                                class="bg-primary hover:bg-secondary text-white px-6 py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                                Download Now
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">We respect your privacy. No spam, unsubscribe anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gifting" class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-4">
+                    Premium <span class="text-primary">Gift Hampers</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Express your love and gratitude with our beautifully curated gift hampers,
+                    perfect for every occasion and celebration.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Luxury%20Indian%20sweet%20gift%20hamper%20with%20elegant%20packaging%2C%20premium%20sweets%20arranged%20beautifully%2C%20golden%20ribbon%2C%20traditional%20brass%20elements%2C%20heritage%20style%20presentation%2C%20warm%20lighting&width=400&height=300&seq=gift1&orientation=landscape"
+                            alt="Premium Gift Hamper" class="w-full h-64 object-cover object-top">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Heritage Deluxe</h3>
+                            <p class="text-gray-600 mb-4">A premium collection of our finest sweets and snacks,
+                                beautifully packaged in traditional style.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl font-bold text-primary heritage-font">₹2,499</span>
+                                <span class="text-sm text-gray-500">Serves 8-10 people</span>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                                Customize & Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Festival%20special%20gift%20box%20with%20assorted%20Indian%20sweets%2C%20decorative%20packaging%20with%20traditional%20motifs%2C%20festive%20colors%2C%20premium%20presentation%2C%20elegant%20arrangement%2C%20heritage%20style&width=400&height=300&seq=gift2&orientation=landscape"
+                            alt="Festival Special" class="w-full h-64 object-cover object-top">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Festival Special</h3>
+                            <p class="text-gray-600 mb-4">Specially curated for festivals with seasonal favorites and
+                                traditional delicacies.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl font-bold text-primary heritage-font">₹1,799</span>
+                                <span class="text-sm text-gray-500">Serves 6-8 people</span>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                                Customize & Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Corporate%20gift%20hamper%20with%20branded%20packaging%2C%20professional%20presentation%2C%20assorted%20premium%20sweets%2C%20elegant%20design%2C%20business%20gifting%20style%2C%20sophisticated%20arrangement&width=400&height=300&seq=gift3&orientation=landscape"
+                            alt="Corporate Hamper" class="w-full h-64 object-cover object-top">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Corporate Elite</h3>
+                            <p class="text-gray-600 mb-4">Perfect for corporate gifting with professional packaging and
+                                premium selection.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl font-bold text-primary heritage-font">₹3,299</span>
+                                <span class="text-sm text-gray-500">Bulk orders available</span>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button heritage-font font-semibold transition-all whitespace-nowrap">
+                                Customize & Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12 fade-in">
+                <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-800 heritage-font mb-4">Personalization Options</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-primary rounded-full mx-auto mb-3">
+                                <i class="ri-edit-line text-white"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Custom Messages</h4>
+                            <p class="text-sm text-gray-600">Add personalized messages and greetings</p>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-primary rounded-full mx-auto mb-3">
+                                <i class="ri-palette-line text-white"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Custom Packaging</h4>
+                            <p class="text-sm text-gray-600">Choose from various packaging styles</p>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-primary rounded-full mx-auto mb-3">
+                                <i class="ri-gift-line text-white"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Product Selection</h4>
+                            <p class="text-sm text-gray-600">Customize contents based on preferences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 heritage-font mb-4">
+                    Order Online from Your <span class="text-primary">Favorite Platform</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Enjoy Kaligodam's authentic sweets and snacks delivered to your doorstep through
+                    our trusted e-commerce partners.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div class="fade-in text-center group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3 text-2xl">
+                            <i class="ri-amazon-fill text-orange-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 heritage-font">Amazon</h3>
+                        <p class="text-xs text-gray-600 mt-1">Prime Delivery</p>
+                    </div>
+                </div>
+                <div class="fade-in text-center group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3 text-2xl">
+                            <i class="ri-restaurant-line text-orange-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 heritage-font">Swiggy</h3>
+                        <p class="text-xs text-gray-600 mt-1">Quick Delivery</p>
+                    </div>
+                </div>
+                <div class="fade-in text-center group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3 text-2xl">
+                            <i class="ri-restaurant-2-line text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 heritage-font">Zomato</h3>
+                        <p class="text-xs text-gray-600 mt-1">Fast Delivery</p>
+                    </div>
+                </div>
+                <div class="fade-in text-center group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3 text-2xl">
+                            <i class="ri-shopping-cart-line text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 heritage-font">Flipkart</h3>
+                        <p class="text-xs text-gray-600 mt-1">Assured Quality</p>
+                    </div>
+                </div>
+                <div class="fade-in text-center group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3 text-2xl">
+                            <i class="ri-flashlight-line text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 heritage-font">Blinkit</h3>
+                        <p class="text-xs text-gray-600 mt-1">10 Min Delivery</p>
+                    </div>
+                </div>
+                <div class="fade-in text-center group cursor-pointer">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3 text-2xl">
+                            <i class="ri-shopping-basket-line text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 heritage-font">BigBasket</h3>
+                        <p class="text-xs text-gray-600 mt-1">Fresh Delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <footer class="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-16 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div class="text-3xl font-['Pacifico'] text-amber-200 mb-4">Kaligodam</div>
+          <p class="text-amber-100 mb-6 leading-relaxed">
+            Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks,
+            made with love and tradition.
+          </p>
+          <div class="flex space-x-4">
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+              <i class="ri-facebook-fill"></i>
+            </div>
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+              <i class="ri-instagram-line"></i>
+            </div>
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+              <i class="ri-twitter-line"></i>
+            </div>
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+              <i class="ri-youtube-line"></i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold heritage-font mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="./index.html" class="text-amber-100 hover:text-white transition-colors">Home</a></li>
+            <li><a href="./our-story.html" class="text-amber-100 hover:text-white transition-colors">Our Story</a></li>
+            <li><a href="./product.html" class="text-amber-100 hover:text-white transition-colors">Products</a></li>
+            <li><a href="./outlets.html" class="text-amber-100 hover:text-white transition-colors">Outlets</a></li>
+            <li><a href="./contact.html" class="text-amber-100 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Franchise</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold heritage-font mb-4">Our Locations</h3>
+          <ul class="space-y-2 text-amber-100 text-sm">
+            <li>• Burrabazar (Heritage Store)</li>
+            <li>• Lake Market</li>
+            <li>• Howrah</li>
+            <li>• Salt Lake</li>
+            <li>• Gariahat</li>
+            <li>• New Market</li>
+          </ul>
+          <h3 class="text-xl font-bold heritage-font mb-4 mt-6">Order Online</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Swiggy</a></li>
+            <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Zomato</a></li>
+            <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Amazon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold heritage-font mb-4">Stay Connected</h3>
+          <p class="text-amber-100 mb-4">Subscribe to our newsletter for special offers and updates.</p>
+          <div class="flex space-x-2 mb-4">
+            <input type="email" placeholder="Your email address"
+              class="flex-1 px-3 py-2 bg-amber-800 border border-amber-700 !rounded-button text-white placeholder-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm" />
+            <button
+              class="bg-primary hover:bg-secondary px-4 py-2 !rounded-button transition-all whitespace-nowrap">
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-send-plane-line"></i>
+              </div>
+            </button>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="flex items-center space-x-2">
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-phone-line text-amber-300"></i>
+              </div>
+              <span class="text-amber-100">+91 33 2234 5678</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-mail-line text-amber-300"></i>
+              </div>
+              <span class="text-amber-100">info@kaligodam.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-amber-800 mt-12 pt-8 text-center">
+        <p class="text-amber-200">
+          © 2025 Kaligodam Heritage Sweets. All rights reserved. | Established 1928 |
+          <span class="text-amber-300">Crafting Sweet Memories for 97 Years</span>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Fade-in animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Mobile menu functionality
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuClose = document.getElementById('mobile-menu-close');
-            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-
-            function openMobileMenu() {
-                mobileMenu.classList.add('active');
-                mobileMenuOverlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeMobileMenu() {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-
-            mobileMenuButton.addEventListener('click', openMobileMenu);
-            mobileMenuClose.addEventListener('click', closeMobileMenu);
-            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-
-            // Close mobile menu when clicking on a link
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', closeMobileMenu);
-            });
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Intersection Observer for fade-in animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
         });
-    </script>
+      }, observerOptions);
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Mobile menu toggle
+      const menuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    });
+  </script>
 </body>
 
 </html>
