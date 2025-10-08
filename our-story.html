@@ -33,10 +33,6 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
     <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
-
         .heritage-font {
             font-family: 'Playfair Display', serif;
         }
@@ -61,49 +57,49 @@
 <body class="bg-gradient-to-b from-orange-50 to-amber-50 body-font">
     <!-- Header -->
     <header
-        class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center space-x-4">
-                    <div class="text-3xl font-['Pacifico'] text-primary">Kaligodam</div>
-                    <div class="text-sm text-secondary heritage-font">Since 1928</div>
-                </div>
-
-                <!-- Desktop Nav -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="./index.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Home</a>
-                    <a href="./product.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our Product</a>
-                    <a href="./our-story.html"
-                        class="text-primary transition-colors heritage-font font-semibold">Our Story</a>
-                    <a href="./outlets.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
-                    <a href="./contact.html"
-                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Contact</a>
-                </nav>
-
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                    <i class="ri-menu-line text-gray-700 text-2xl"></i>
-                </button>
-            </div>
+    class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center space-x-4">
+          <a href="./index.html" class="flex items-center space-x-3">
+            <img src="./image/Logo.png" alt="Kaligodam Logo" class="h-28 w-auto md:h-32 lg:h-36" />
+          </a>
         </div>
 
-        <!-- Mobile Nav -->
-        <nav id="mobile-menu" class="hidden md:hidden bg-amber-100 border-t border-primary shadow-lg">
-            <a href="./index.html"
-                class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Home</a>
-            <a href="./product.html"
-                class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Our Product</a>
-            <a href="./our-story.html"
-                class="block px-6 py-3 text-primary heritage-font font-semibold border-b border-primary">Our Story</a>
-            <a href="./outlets.html"
-                class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Outlets</a>
-            <a href="./contact.html"
-                class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Contact</a>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="./index.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Home</a>
+          <a href="./product.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our Product</a>
+          <a href="./our-story.html"
+            class="text-primary transition-colors heritage-font font-semibold">Our Story</a>
+          <a href="./outlets.html"
+            class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
+          <a href="./contact.html" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Contact</a>
         </nav>
-    </header>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+          <i class="ri-menu-line text-gray-700 text-3xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+     <nav id="mobile-menu" class="hidden md:hidden bg-amber-100 border-t border-primary shadow-lg">
+      <a href="./index.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Home</a>
+      <a href="./product.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Our Product</a>
+      <a href="./our-story.html"
+        class="block px-6 py-3 text-primary heritage-font font-semibold border-b border-primary">Our Story</a>
+      <a href="./outlets.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Outlets</a>
+      <a href="./contact.html"
+        class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Contact</a>
+    </nav>
+  </header>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center overflow-hidden pt-20"
@@ -130,7 +126,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="fade-in order-2 lg:order-1">
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="https://readdy.ai/api/search-image?query=Vintage%20Burrabazar%20Kolkata%20sweet%20shop%20storefront%201920s%20era%2C%20sepia%20photograph%2C%20traditional%20Bengali%20signboard%2C%20heritage%20architecture%2C%20historical%20Kolkata%20street&width=600&height=700&seq=burrabazar1928&orientation=portrait"
+                        <img src="./image/Logo.png"
                             alt="Kaligodam Heritage" class="w-full h-full object-cover object-top">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 text-white">
@@ -177,14 +173,12 @@
                 <!-- Boondia -->
                 <div class="fade-in">
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
-                        <img src="https://readdy.ai/api/search-image?query=Hot%20fresh%20boondi%20sweet%20Bengali%20style%20golden%20crispy%20balls%20close-up%2C%20traditional%20preparation%2C%20warm%20lighting%2C%20authentic%20Kolkata%20sweet&width=600&height=400&seq=boondia1&orientation=landscape"
-                            alt="Signature Boondia" class="w-full h-72 object-cover object-top">
+                        <img src="./image/product/Desi Special mota boondiya .jpg"
+                            alt="Desi Special mota boondiya" class="w-full h-72 object-cover object-top">
                         <div class="p-8">
-                            <h3 class="text-3xl font-bold text-gray-800 heritage-font mb-3">Hot Boondia</h3>
+                            <h3 class="text-3xl font-bold text-gray-800 heritage-font mb-3">Desi Special mota boondiya</h3>
                             <p class="text-lg text-gray-700 leading-relaxed">
-                                Our most celebrated creation — crispy, golden spheres of chickpea flour, perfectly 
-                                sweetened and served fresh. Hot Boondia is not just our signature product; it's what 
-                                Kaligodam's name has become synonymous with across Kolkata.
+                               Soft, juicy pearls of besan soaked in light sugar syrup — a nostalgic sweet from Kaligodam that melts in your mouth and hearts alike.
                             </p>
                         </div>
                     </div>
@@ -193,14 +187,12 @@
                 <!-- Bhujia -->
                 <div class="fade-in">
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
-                        <img src="https://readdy.ai/api/search-image?query=Traditional%20Indian%20bhujia%20crispy%20snack%20golden%20strands%20close-up%2C%20authentic%20preparation%2C%20traditional%20Bengali%20namkeen%2C%20savory%20snack&width=600&height=400&seq=bhujia1&orientation=landscape"
-                            alt="Premium Bhujia" class="w-full h-72 object-cover object-top">
+                        <img src="./image/product/Bhujia with boondiya.jpg"
+                            alt="Bhujia with boondiya" class="w-full h-72 object-cover object-top">
                         <div class="p-8">
-                            <h3 class="text-3xl font-bold text-gray-800 heritage-font mb-3">Premium Bhujia</h3>
+                            <h3 class="text-3xl font-bold text-gray-800 heritage-font mb-3">Bhujia with boondiya</h3>
                             <p class="text-lg text-gray-700 leading-relaxed">
-                                Thin, crispy strands of perfectly spiced gram flour — a savory masterpiece that has 
-                                been delighting taste buds for generations. Made with our secret family spice blend 
-                                that creates the perfect balance of flavor.
+                                The classic Marwari combo of soft, syrupy boondiya paired with crunchy, spicy bhujia — a perfect balance of sweet and savory that defines every festive celebration.
                             </p>
                         </div>
                     </div>
@@ -294,11 +286,11 @@
                 <div class="fade-in">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="rounded-2xl overflow-hidden shadow-lg">
-                            <img src="https://readdy.ai/api/search-image?query=Indian%20family%20business%20sweet%20making%20traditional%20kitchen%20multiple%20generations%20working%20together%2C%20heritage%20craftsmanship%2C%20warm%20atmosphere&width=300&height=400&seq=family1&orientation=portrait"
+                            <img src="./image/product/Untitled design (12).png"
                                 alt="Family Legacy" class="w-full h-full object-cover object-top">
                         </div>
                         <div class="rounded-2xl overflow-hidden shadow-lg mt-8">
-                            <img src="https://readdy.ai/api/search-image?query=Traditional%20Bengali%20sweet%20maker%20hands%20crafting%20sweets%20close-up%2C%20skilled%20artisan%2C%20traditional%20technique%2C%20detailed%20craftsmanship&width=300&height=400&seq=family2&orientation=portrait"
+                            <img src="./image/product/Untitled design (13).png"
                                 alt="Craftsmanship" class="w-full h-full object-cover object-top">
                         </div>
                     </div>
@@ -415,7 +407,7 @@
                 </div>
                 <div class="fade-in">
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="https://readdy.ai/api/search-image?query=Modern%20Kolkata%20cityscape%20with%20traditional%20sweet%20shop%2C%20blend%20of%20heritage%20and%20modernity%2C%20vibrant%20street%20scene%2C%20contemporary%20India&width=700&height=500&seq=kolkata-modern&orientation=landscape"
+                        <img src="./image/Burrabazar (1).jpg"
                             alt="Kolkata Today" class="w-full h-96 object-cover object-top">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 text-white">
@@ -428,34 +420,32 @@
         </div>
     </section>
 
-    <footer class="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-16 mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <div class="text-3xl font-['Pacifico'] text-amber-200 mb-4">Kaligodam</div>
-                    <p class="text-amber-100 mb-6 leading-relaxed">
-                        Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks, made with
-                        love and tradition from Kolkata's heart.
-                    </p>
-                    <div class="flex space-x-4">
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-facebook-fill"></i>
-                        </div>
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-instagram-line"></i>
-                        </div>
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-twitter-line"></i>
-                        </div>
-                        <div
-                            class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-youtube-line"></i>
-                        </div>
+    <footer class="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <!-- Logo Added -->
+                <img src="./image/Logo.png" alt="Kaligodam Logo" class="h-32 w-auto mb-4" />
+                
+                <p class="text-amber-100 mb-6 leading-relaxed">
+                    Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks, made
+                    with love and
+                    tradition from Kolkata's heart.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/iloveKaligodam/"><div
+                        class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                        <i class="ri-facebook-fill"></i>
                     </div>
+                    </a>
+                    <a href="https://www.instagram.com/kaligodam/"><div
+                        class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                        <i class="ri-instagram-line"></i>
+                    </div>
+                    </a>
                 </div>
+            </div>
+
                 <div>
                     <h3 class="text-xl font-bold heritage-font mb-4">Quick Links</h3>
                     <ul class="space-y-2">
@@ -499,21 +489,20 @@
                             <div class="w-4 h-4 flex items-center justify-center">
                                 <i class="ri-phone-line text-amber-300"></i>
                             </div>
-                            <span class="text-amber-100">+91 98765 43210</span>
+                            <span class="text-amber-100">+91 85830 22208</span>
                         </div>
                         <div class="flex items-center space-x-2">
                             <div class="w-4 h-4 flex items-center justify-center">
                                 <i class="ri-mail-line text-amber-300"></i>
                             </div>
-                            <span class="text-amber-100">info@kaligodam.com</span>
+                            <span class="text-amber-100">customercare@kaligodam.com</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="border-t border-amber-800 mt-12 pt-8 text-center">
                 <p class="text-amber-200">
-                    © 2025 Kaligodam Heritage Sweets. All rights reserved. | Established 1928 |
-                    <span class="text-amber-300">Crafting Sweet Memories for 97 Years</span>
+                    © 2025 Kaligodam Heritage Sweets. All rights reserved. 
                 </p>
             </div>
         </div>
@@ -540,9 +529,23 @@
             // Mobile menu toggle
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    // Toggle icon between menu and close
+                    const icon = menuButton.querySelector('i');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        icon.classList.remove('ri-close-line');
+                        icon.classList.add('ri-menu-line');
+                    } else {
+                        icon.classList.remove('ri-menu-line');
+                        icon.classList.add('ri-close-line');
+                    }
+                });
+            }
 
             // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -100,42 +100,67 @@
         .star-rating {
             color: #FCD34D;
         }
+
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        #mobile-menu.active {
+            max-height: 500px;
+        }
     </style>
 </head>
 
 <body class="bg-gradient-to-b from-orange-50 to-amber-50 body-font">
     <!-- Header -->
-    <header class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
+    <header
+        class="fixed top-0 w-full bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center space-x-4">
-                    <a href="./index.html" class="text-3xl font-['Pacifico'] text-primary">Kaligodam</a>
-                    <div class="text-sm text-secondary heritage-font">Since 1928</div>
+                    <a href="./index.html" class="flex items-center space-x-3">
+                        <img src="./image/Logo.png" alt="Kaligodam Logo" class="h-28 w-auto md:h-32 lg:h-36" />
+                    </a>
                 </div>
 
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="./index.html" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Home</a>
-                    <a href="./product.html" class="text-primary transition-colors heritage-font font-semibold">Our Product</a>
-                    <a href="./our-story.html" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our Story</a>
-                    <a href="./outlets.html" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
-                    <a href="./contact.html" class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Contact</a>
+                    <a href="./index.html"
+                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Home</a>
+                    <a href="./product.html"
+                        class="text-primary transition-colors heritage-font font-semibold">Our Product</a>
+                    <a href="./our-story.html"
+                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Our
+                        Story</a>
+                    <a href="./outlets.html"
+                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Outlets</a>
+                    <a href="./contact.html"
+                        class="text-gray-800 hover:text-primary transition-colors heritage-font font-semibold">Contact</a>
                 </nav>
 
                 <!-- Mobile menu button -->
                 <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                    <i class="ri-menu-line text-gray-700 text-2xl"></i>
+                    <i id="menu-icon" class="ri-menu-line text-gray-700 text-2xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Nav -->
-        <nav id="mobile-menu" class="hidden md:hidden bg-amber-100 border-t border-primary shadow-lg">
-            <a href="./index.html" class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Home</a>
-            <a href="./product.html" class="block px-6 py-3 text-primary heritage-font font-semibold border-b border-primary">Our Product</a>
-            <a href="./our-story.html" class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Our Story</a>
-            <a href="./outlets.html" class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Outlets</a>
-            <a href="./contact.html" class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Contact</a>
+        <nav id="mobile-menu" class="md:hidden bg-amber-100 border-t border-primary shadow-lg">
+            <a href="./index.html"
+                class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Home</a>
+            <a href="./product.html"
+                class="block px-6 py-3 text-primary heritage-font font-semibold border-b border-primary">Our
+                Product</a>
+            <a href="./our-story.html"
+                class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Our
+                Story</a>
+            <a href="./outlets.html"
+                class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Outlets</a>
+            <a href="./contact.html"
+                class="block px-6 py-3 text-gray-800 hover:text-primary heritage-font font-semibold border-b border-primary">Contact</a>
         </nav>
     </header>
 
@@ -147,111 +172,98 @@
                     Our <span class="text-primary">Varieties Product</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    From traditional Besan Laddu to premium dry fruit varieties, explore our carefully crafted collection of authentic Indian sweets.
+                    From traditional Besan Laddu to premium dry fruit varieties, explore our carefully crafted
+                    collection of authentic Indian sweets.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Product 1: Bhujia with boondiya -->
                 <div class="fade-in group">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-                        <img src="./image/product/Bhujia with boondiya.jpg"
-                            alt="Bhujia with boondiya" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="./image/product/Bhujia with boondiya.jpg" alt="Bhujia with boondiya"
+                            class="w-full h-48 object-cover object-top rounded-xl mb-4">
                         <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Bhujia with boondiya</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Classic gram flour laddu with pure ghee, cardamom, and premium nuts. A timeless favorite.</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl font-bold text-primary heritage-font">₹450</span>
-                            <span class="text-sm text-gray-500">per kg</span>
-                        </div>
-                        
+                        <p class="text-gray-600 mb-4 text-sm">Crispy, spiced strands of besan and moth flour, fried to
+                            perfection for that signature crunch — the perfect anytime snack.</p>
                     </div>
                 </div>
 
                 <!-- Product 2: Desi Special mota boondiya -->
                 <div class="fade-in group">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-                        <img src="./image/product/Desi Special mota boondiya .jpg"
-                            alt="Desi Special mota boondiya" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="./image/product/Desi Special mota boondiya .jpg" alt="Desi Special mota boondiya"
+                            class="w-full h-48 object-cover object-top rounded-xl mb-4">
                         <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Desi Special mota boondiya</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Fresh coconut blended with condensed milk and cardamom for a tropical delight.</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl font-bold text-primary heritage-font">₹520</span>
-                            <span class="text-sm text-gray-500">per kg</span>
-                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">Soft, juicy pearls of besan soaked in light sugar syrup —
+                            a nostalgic sweet from Kaligodam that melts in your mouth and hearts alike.</p>
                     </div>
                 </div>
 
                 <!-- Product 3: Kaju barfi -->
                 <div class="fade-in group">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-                        <img src="./image/product/Kaju barfi.jpg"
-                            alt="Kaju barfi" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="./image/product/Kaju barfi.jpg" alt="Kaju barfi"
+                            class="w-full h-48 object-cover object-top rounded-xl mb-4">
                         <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Kaju barfi</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Roasted semolina laddu with ghee, sugar, and aromatic spices for perfect texture.</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl font-bold text-primary heritage-font">₹480</span>
-                            <span class="text-sm text-gray-500">per kg</span>
-                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">Classic diamond-shaped cashew delicacy made from premium
+                            kaju - and pure sugar syrup, offering a smooth, rich, and melt-in-mouth experience.</p>
                     </div>
                 </div>
 
                 <!-- Product 4: Kesariya Peda -->
                 <div class="fade-in group">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-                        <img src="./image/product/Kesariya Peda.jpg"
-                            alt="Kesariya Peda" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="./image/product/Kesariya Peda.jpg" alt="Kesariya Peda"
+                            class="w-full h-48 object-cover object-top rounded-xl mb-4">
                         <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Kesariya Peda</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Premium laddu packed with almonds, cashews, pistachios, and dates for luxury taste.</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl font-bold text-primary heritage-font">₹750</span>
-                            <span class="text-sm text-gray-500">per kg</span>
-                        </div>
-                        
+                        <p class="text-gray-600 mb-4 text-sm">Soft, rich milk peda infused with pure saffron strands
+                            for a royal touch of aroma, color, and taste.</p>
+
                     </div>
                 </div>
 
                 <!-- Product 5: mahin laddu -->
                 <div class="fade-in group">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-                        <img src="./image/product/mahin laddu.jpg"
-                            alt="mahin laddu" class="w-full h-48 object-cover object-top rounded-xl mb-4">
-                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Mahin laddu</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Tiny pearl-like boondi sweetened to perfection, a festive favorite across India.</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl font-bold text-primary heritage-font">₹550</span>
-                            <span class="text-sm text-gray-500">per kg</span>
-                        </div>
-                        
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="./image/product/mahin laddu.jpg" alt="mahin laddu"
+                            class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Mahin laddoo</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Traditional handcrafted laddoos made with pure desi ghee,
+                            roasted gram flour, and a hint of cardamom — rich, aromatic, and melt-in-mouth, just like
+                            home.</p>
                     </div>
                 </div>
 
                 <!-- Product 6: Rajasthani Peda -->
                 <div class="fade-in group">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-                        <img src="./image/product/Rajasthani Peda.jpg"
-                            alt="Rajasthani Peda" class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="./image/product/Rajasthani Peda.jpg" alt="Rajasthani Peda"
+                            class="w-full h-48 object-cover object-top rounded-xl mb-4">
                         <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Rajasthani Peda</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Traditional boondi laddu with cardamom essence, perfect for celebrations and gifting.</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl font-bold text-primary heritage-font">₹500</span>
-                            <span class="text-sm text-gray-500">per kg</span>
-                        </div>
-                        
+                        <p class="text-gray-600 mb-4 text-sm">Traditional mawa peda from the royal kitchens of
+                            Rajasthan — soft, rich, and perfectly sweetened with a hint of cardamom.</p>
+
                     </div>
                 </div>
 
-                <!-- Product 7: Kaju Katli -->
+                <!-- Product 7: Mahin laddoo -->
                 <div class="fade-in group">
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-                        <img src="./image/product/DSC_2722.jpg"
-                            alt="Kaju Katli" class="w-full h-48 object-cover object-top rounded-xl mb-4">
-                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Kaju Katli</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Premium cashew fudge with silver foil, the epitome of Indian sweet luxury.</p>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-2xl font-bold text-primary heritage-font">₹950</span>
-                            <span class="text-sm text-gray-500">per kg</span>
-                        </div>
-                        
+                    <div
+                        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                        <img src="./image/product/DSC_2722.jpg" alt="Kaju Katli"
+                            class="w-full h-48 object-cover object-top rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 heritage-font mb-2">Mahin laddoo</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Traditional handcrafted laddoos made with pure desi ghee,
+                            roasted gram flour, and a hint of cardamom — rich, aromatic, and melt-in-mouth, just like
+                            home.</p>
+
                     </div>
                 </div>
             </div>
@@ -263,50 +275,63 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div>
-                    <div class="text-3xl font-['Pacifico'] text-amber-200 mb-4">Kaligodam</div>
+                    <!-- Logo Added -->
+                    <img src="./image/Logo.png" alt="Kaligodam Logo" class="h-32 w-auto mb-4" />
+
                     <p class="text-amber-100 mb-6 leading-relaxed">
-                        Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks, made with love and tradition.
+                        Crafting sweet memories since 1928. Four generations of authentic Indian sweets and snacks, made
+                        with love and
+                        tradition from Kolkata's heart.
                     </p>
-                    <div class="flex space-x-4">
-                        <div class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-facebook-fill"></i>
-                        </div>
-                        <div class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-instagram-line"></i>
-                        </div>
-                        <div class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-twitter-line"></i>
-                        </div>
-                        <div class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
-                            <i class="ri-youtube-line"></i>
-                        </div>
+                     <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/iloveKaligodam/"><div
+                        class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                        <i class="ri-facebook-fill"></i>
                     </div>
+                    </a>
+                    <a href="https://www.instagram.com/kaligodam/"><div
+                        class="w-8 h-8 flex items-center justify-center bg-amber-800 rounded-full cursor-pointer hover:bg-amber-700 transition-colors">
+                        <i class="ri-instagram-line"></i>
+                    </div>
+                    </a>
                 </div>
+                </div>
+
                 <div>
                     <h3 class="text-xl font-bold heritage-font mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="./index.html" class="text-amber-100 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="./our-story.html" class="text-amber-100 hover:text-white transition-colors">Our Story</a></li>
-                        <li><a href="./product.html" class="text-amber-100 hover:text-white transition-colors">Products</a></li>
-                        <li><a href="./outlets.html" class="text-amber-100 hover:text-white transition-colors">Outlets</a></li>
-                        <li><a href="./contact.html" class="text-amber-100 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="./index.html" class="text-amber-100 hover:text-white transition-colors">Home</a>
+                        </li>
+                        <li><a href="./our-story.html" class="text-amber-100 hover:text-white transition-colors">Our
+                                Story</a></li>
+                        <li><a href="./product.html"
+                                class="text-amber-100 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="./outlets.html"
+                                class="text-amber-100 hover:text-white transition-colors">Outlets</a></li>
+                        <li><a href="./contact.html"
+                                class="text-amber-100 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold heritage-font mb-4">Customer Care</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-amber-100 hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Shipping Info</a></li>
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Return Policy</a></li>
-                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Shipping Info</a>
+                        </li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Return Policy</a>
+                        </li>
+                        <li><a href="#" class="text-amber-100 hover:text-white transition-colors">Terms &
+                                Conditions</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold heritage-font mb-4">Stay Connected</h3>
                     <p class="text-amber-100 mb-4">Subscribe to our newsletter for special offers and updates.</p>
                     <div class="flex space-x-2 mb-4">
-                        <input type="email" placeholder="Your email address" class="flex-1 px-3 py-2 bg-amber-800 border border-amber-700 !rounded-button text-white placeholder-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
-                        <button class="bg-primary hover:bg-secondary px-4 py-2 !rounded-button transition-all whitespace-nowrap">
+                        <input type="email" placeholder="Your email address"
+                            class="flex-1 px-3 py-2 bg-amber-800 border border-amber-700 !rounded-button text-white placeholder-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm">
+                        <button
+                            class="bg-primary hover:bg-secondary px-4 py-2 !rounded-button transition-all whitespace-nowrap">
                             <div class="w-4 h-4 flex items-center justify-center">
                                 <i class="ri-send-plane-line"></i>
                             </div>
@@ -317,21 +342,20 @@
                             <div class="w-4 h-4 flex items-center justify-center">
                                 <i class="ri-phone-line text-amber-300"></i>
                             </div>
-                            <span class="text-amber-100">+91 98765 43210</span>
+                            <span class="text-amber-100">+91 85830 22208</span>
                         </div>
                         <div class="flex items-center space-x-2">
                             <div class="w-4 h-4 flex items-center justify-center">
                                 <i class="ri-mail-line text-amber-300"></i>
                             </div>
-                            <span class="text-amber-100">info@kaligodam.com</span>
+                            <span class="text-amber-100">customercare@kaligodam.com </span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="border-t border-amber-800 mt-12 pt-8 text-center">
                 <p class="text-amber-200">
-                    © 2025 Kaligodam Heritage Sweets. All rights reserved. | Established 1928 |
-                    <span class="text-amber-300">Crafting Sweet Memories for 97 Years</span>
+                    © 2025 Kaligodam Heritage Sweets. All rights reserved.
                 </p>
             </div>
         </div>
@@ -359,10 +383,39 @@
             });
 
             // Mobile menu toggle
-            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+            const menuIcon = document.getElementById('menu-icon');
+
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('active');
+                if (mobileMenu.classList.contains('active')) {
+                    menuIcon.classList.remove('ri-menu-line');
+                    menuIcon.classList.add('ri-close-line');
+                } else {
+                    menuIcon.classList.remove('ri-close-line');
+                    menuIcon.classList.add('ri-menu-line');
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnButton = mobileMenuButton.contains(event.target);
+                if (!isClickInsideMenu && !isClickOnButton && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    menuIcon.classList.remove('ri-close-line');
+                    menuIcon.classList.add('ri-menu-line');
+                }
+            });
+
+            // Close menu on window resize to desktop
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 768 && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    menuIcon.classList.remove('ri-close-line');
+                    menuIcon.classList.add('ri-menu-line');
+                }
             });
         });
     </script>
